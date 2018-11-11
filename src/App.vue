@@ -1,14 +1,10 @@
 <template>
   <v-app>
     <mainheader/>
-<!--    
 
-    <v-content>
-      <HelloWorld/>
-    </v-content> 
-    <delivery/>
-      <!-- <Mainheader/>
-   <router-view/>  --> 
+
+
+
   </v-app>
   
   
