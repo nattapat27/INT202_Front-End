@@ -1,23 +1,36 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <v-app>
+    <mainheader/>
+<!--    
+
+    <v-content>
+      <HelloWorld/>
+    </v-content> 
+    <delivery/>
+      <!-- <Mainheader/>
+   <router-view/>  --> 
+  </v-app>
+  
+  
 </template>
 
 <script>
-export default {
-  name: 'App'
+import HelloWorld from './components/HelloWorld'
+import Delivery from './components/Delivery'
+import Mainheader from './components/Mainheader'
+import '@mdi/font/css/materialdesignicons.css'
+
+export default { //พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
+  name: 'App',
+  components: {
+    HelloWorld,
+    Delivery,
+    Mainheader
+  },
+  data () {
+    return {
+      //
+    }
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
