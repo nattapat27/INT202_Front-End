@@ -20,6 +20,6 @@ Vue.use(Vuetify, {
   iconfont: 'mdi'
 })
 
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue)
 
 // hello

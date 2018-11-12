@@ -1,33 +1,26 @@
 <template>
   <v-app>
     <mainheader/>
-    <h1>fffff</h1>
-    <h1>fffff</h1>
-    <h1>fffff</h1>
-    <h1>fffff</h1>
-    <h1>fffff</h1>
-    <h1>fffff</h1>
-    <h1>fffff</h1>
-    <button  @click="setCurentCheckoutStatus(false)"> Chang </button>
-
-
+    <br>
+    <br>
+    <delivery/>
+    <br>
+    <br>
 
   </v-app>
-  
-  
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
 import Delivery from './components/Delivery'
 import Mainheader from './components/Mainheader'
-import '@mdi/font/css/materialdesignicons.css'
-import {mapActions, mapGetters} from 'vuex'
 
-export default { //พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
+import '@mdi/font/css/materialdesignicons.css'
+import { mapActions, mapGetters } from 'vuex'
+
+export default { // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
   name: 'App',
   components: {
-    HelloWorld,
     Delivery,
     Mainheader
   },
