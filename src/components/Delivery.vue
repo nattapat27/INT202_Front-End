@@ -1,53 +1,102 @@
 <template>
-    <div>
-      <br>
-      <br>
-      
-      <h1> DELIVERY  </h1>
-      <v-card>
-        <v-card-text>
-           <div>
-            First name                      Last name
-           </div>
-                <div>
-            phone number                    e-mail address
-                </div>
-            country                         city
-            <div>
-            country                         Zipcode
-            </div>
-              <v-btn color="GRAY">BACK</v-btn>
-            <router-link to="/pop"> <v-btn  color="GREEN">NEXT</v-btn></router-link> 
-        </v-card-text>
-      </v-card>
-      <!-- <img :src="imgProduct" alt=""> -->
-      <br>
 
-    </div> 
-       
+<v-container grid-list-md text-xs-left>
+
+<v-card >
+
+  <br>
+  <br>
+     <h1 class="text-md-left">    DELIVERY  </h1>
+   <v-form>
+    <v-container>
+      <v-layout row wrap>
+
+        <v-flex xs12 sm6>
+          FIRST NAME
+          <v-text-field
+            label="First name"
+            single-line
+            solo
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex xs12 sm6>
+          LAST NAME
+          <v-text-field
+            label="Last name"
+            single-line
+            solo
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex xs12 sm6>
+          PHONE NUMBER
+          <v-text-field
+          type="number"
+            label="number"
+            single-line
+            solo
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex xs12 sm6>
+          E-MAIL ADDRESS
+          <v-text-field
+            type="email"
+            label="email"
+            single-line
+            solo
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex xs12 sm6>
+          COUNTRY
+          <v-select
+          :items="items"
+          label="Solo field"
+          solo
+        ></v-select>
+        </v-flex>
+
+        <v-flex xs12 sm6>
+          CITY
+          <v-text-field
+            label="city"
+            single-line
+            solo
+          ></v-text-field>
+        </v-flex>
+        <v-flex xs12 sm6>
+          ADDRESS
+          <b-form-textarea id="textarea1"
+                     v-model="text"
+                     placeholder="Enter something"
+                     :rows="3"
+                     :max-rows="6"
+                     solo >
+     </b-form-textarea>
+        </v-flex>
+
+        <v-flex xs12 sm6>
+          ZIPCODE
+          <v-text-field
+          type="number"
+            label="zipcode"
+            single-line
+            solo
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-form>
+</v-card>
+</v-container>
 </template>
-
-
 <script>
-import axios from "axios";
 export default {
-  name: "Delivery",
-  components: {
-   
-  },
-  data() {
-    return {
-      videos: [],
-      messages: ["eiei", "sun", "vueJS"],
-      imgProduct: 'https://images-na.ssl-images-amazon.com/images/I/71rGsNpSooL._SL1500_.jpg'
-    };
-  },
-  async mounted(){
-    console.log('render sed laew');
-    let videos = await axios.get("https://videoservice-seal.mybluemix.net/videos")
-    console.log(videos.data) 
-    this.videos = videos.data
-  }
-};
+  data: () => ({
+    items: ['THAILAND', 'JAPAN', 'KOREA', 'CHINA'],
+    text: ''
+  })
+}
 </script>
-
