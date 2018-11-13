@@ -18,8 +18,9 @@
     </v-stepper-header>
   </v-stepper>
     </v-stepper>
+
     </template>
 
 <script>
-export default {};
+export default {}
 </script>

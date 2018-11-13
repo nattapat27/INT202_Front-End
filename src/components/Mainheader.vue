@@ -17,10 +17,14 @@
         prepend-inner-icon="search"
         solo-inverted>
       </v-text-field>
+
       </v-spacer>
-      <v-spacer><v-btn color="warning"> Cart  <v-icon color="wthie">shopping_cart</v-icon></v-btn>
+
+      <v-spacer><router-link to="/checkoutproduct"> <v-btn color="warning"> Cart  <v-icon color="wthie">shopping_cart</v-icon></v-btn>
+      </router-link>
       </v-spacer>
     </v-toolbar>
+
    </template>
 <script>
 export default {

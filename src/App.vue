@@ -4,9 +4,14 @@
     <br>
     <br>
     <mainheader/>
+<!--
+    <router-view> </router-view> -->
     <br>
     <br>
-    <delivery/>
+
+    <br>
+    <br>
+
     <br>
     <br>
 
@@ -15,27 +20,28 @@
 </template>
 
 <script>
-import Delivery from "./components/Delivery";
-import Mainheader from "./components/Mainheader";
-import CarouselBanner from "./components/CarouselBanner";
-
-import "@mdi/font/css/materialdesignicons.css";
-import { mapActions, mapGetters } from "vuex";
+import Delivery from './components/Delivery'
+import Mainheader from './components/Mainheader'
+import CarouselBanner from './components/CarouselBanner'
+import Payment from './components/Payment'
+import '@mdi/font/css/materialdesignicons.css'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
-  name: "App",
+  name: 'App',
   components: {
     Delivery,
     Mainheader,
-    CarouselBanner
+    CarouselBanner,
+    Payment
   },
 
   methods: {
-    ...mapActions(["setCurentCheckoutStatus"])
+    ...mapActions(['setCurentCheckoutStatus'])
   },
   computed: {
-    ...mapGetters(["getCurrentCheckoutStatus"])
+    ...mapGetters(['getCurrentCheckoutStatus'])
   }
-};
+}
 </script>
