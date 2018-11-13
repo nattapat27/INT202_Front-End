@@ -1,12 +1,14 @@
 <template>
   <v-app>
-    <carousel-banner/>
+
     <br>
     <br>
     <mainheader/>
     <br>
     <br>
-    <delivery/>
+
+    <show-cart/>
+    <!-- <show-product-all/> -->
     <br>
     <br>
 
@@ -18,6 +20,8 @@
 import Delivery from "./components/Delivery";
 import Mainheader from "./components/Mainheader";
 import CarouselBanner from "./components/CarouselBanner";
+import ShowProductAll from "./components/ShowProductAll";
+import ShowCart from "./components/ShowCart";
 
 import "@mdi/font/css/materialdesignicons.css";
 import { mapActions, mapGetters } from "vuex";
@@ -28,7 +32,9 @@ export default {
   components: {
     Delivery,
     Mainheader,
-    CarouselBanner
+    CarouselBanner,
+    ShowProductAll,
+    ShowCart
   },
 
   methods: {
