@@ -41,7 +41,8 @@ export default {
           src:
           'https://fh.lnwfile.com/_/fh/_raw/gu/as/n1.png'
         }
-      ],
+      ],
+
       items2: [
         {
           src:
@@ -64,7 +65,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
     .sizepic{
 
         padding: 20px;
