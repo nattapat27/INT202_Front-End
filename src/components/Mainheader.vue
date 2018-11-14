@@ -34,8 +34,11 @@
       
  
 
-
-      <v-spacer><router-link to="/checkoutproduct"> <v-btn color="#5670BA" id="fontcolor"> Cart  <v-icon color="wthie">shopping_cart</v-icon></v-btn>
+      <v-spacer>
+        <router-link to="/checkoutproduct"> 
+      <v-btn color="warning" @chick="setIsShowMainHeader(false)"> Cart  
+        <v-icon color="wthie" >shopping_cart</v-icon>
+      </v-btn>
       </router-link>
       </v-spacer>
     </v-toolbar>
@@ -53,8 +56,15 @@
 </style>
 
 <script>
+import  {mapGetters } from 'vuex'
 export default {
-
+    name: 'checkout',
+    computed: {
+      ...mapGetters(['getIsShowMainHeader'])
+    },
+    mounted() {
+       this.getIsShowMainHeader(true)
+    }
 }
 </script>
 
