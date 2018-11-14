@@ -54,17 +54,7 @@
     color: #FFFFFF;
     border-radius: 10px;
   }
-  .test{
-    border-color: blueviolet
-  }
-
-
-
-
 </style>
-  
-   
-   
 
 <script>
 import  {mapGetters } from 'vuex'
