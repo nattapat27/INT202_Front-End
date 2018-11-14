@@ -4,7 +4,7 @@
     <br>
     <br>
     <mainheader/>
-
+    <delivery/>
     <router-view> </router-view>
     <br>
     <br>
@@ -27,6 +27,7 @@ import Mainheader from "./components/Mainheader";
 import CarouselBanner from "./components/CarouselBanner";
 import ShowProductAll from "./components/ShowProductAll";
 import ShowCart from "./components/ShowCart";
+import {mapGetters, mapActions} from 'vuex';
 
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า

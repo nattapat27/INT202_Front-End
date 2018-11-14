@@ -3,7 +3,7 @@
     <br>
        <v-stepper v-model="e1">
     <v-stepper-header>
-      <v-stepper-step :complete="e1 > 1" step="1">CARD</v-stepper-step>
+      <v-stepper-step :complete="e1 > 1" step="1">CART</v-stepper-step>
 
       <v-divider></v-divider>
 
@@ -31,7 +31,7 @@
           color="primary"
           @click="e1 = 2"
         >
-          Continue
+          Next
         </v-btn>
 
         <v-btn flat>Cancel</v-btn>
@@ -41,15 +41,21 @@
       
             <delivery/>
     
+        <v-btn
+          color="primary"
+          @click="e1 = 1"
+        >
+          Back
+        </v-btn>
 
         <v-btn
           color="primary"
           @click="e1 = 3"
         >
-          Continue
+          Next
         </v-btn>
 
-        <v-btn flat>Cancel</v-btn>
+        
       </v-stepper-content>
 
       <v-stepper-content step="3">
@@ -57,12 +63,19 @@
 
         <v-btn
           color="primary"
-          @click="e1 = 4"
+          @click="e1 = 2"
         >
-          Continue
+          Back
         </v-btn>
 
-        <v-btn flat>Cancel</v-btn>
+        <v-btn
+          color="primary"
+          @click="e1 = 4"
+        >
+          Next
+        </v-btn>
+
+        
       </v-stepper-content>
 
 
@@ -79,10 +92,10 @@
           color="primary"
           @click="e1 = 3"
         >
-          Continue
+          Back
         </v-btn>
 
-        <v-btn flat>Cancel</v-btn>
+        
       </v-stepper-content>
 
 
