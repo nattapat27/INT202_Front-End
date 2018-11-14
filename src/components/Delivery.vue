@@ -3,7 +3,7 @@
 <v-container grid-list-md text-xs-left>
 
 <v-card >
-  <h1>Test DElivery</h1>
+  
   <br>
   <br>
      <h1 class="text-md-left">    DELIVERY  </h1>

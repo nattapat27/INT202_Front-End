@@ -4,14 +4,15 @@
     <br>
     <br>
     <mainheader/>
-<!--
-    <router-view> </router-view> -->
-    <br>
-    <br>
 
+    <router-view> </router-view>
     <br>
     <br>
-
+    
+    <router-link to='/checkoutproduct' > </router-link>
+    <br>
+    <br>
+  
     <br>
     <br>
 
