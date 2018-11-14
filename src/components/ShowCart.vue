@@ -25,7 +25,7 @@
 
 </script>
 
-<style>
+<style scoped>
 .ImageProductInCart {
   margin-left: 35%;
 }

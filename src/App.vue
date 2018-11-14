@@ -13,7 +13,9 @@
     <!-- <show-product-all/> -->
     <br>
     <br>
-  
+
+    <ShowProductAll/>
+
     <br>
     <br>
 

@@ -43,7 +43,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 #product {
   width: 974.74px;
   height: 250px;
