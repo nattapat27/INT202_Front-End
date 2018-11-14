@@ -67,8 +67,8 @@
           END DATE
 
         <v-select
-          :items="Month"
-          label="MM"
+          :items="m"
+          label="Month"
           solo
         ></v-select>
         </v-flex>
@@ -76,8 +76,8 @@
         <v-flex xs12 sm6 md3>
           <br>
       <v-select
-          :items="Year"
-          label="YY"
+          :items="y"
+          label="Year"
           solo
         ></v-select>
 
@@ -102,8 +102,8 @@
 <script>
 export default {
   data: () => ({
-    items: ['THAILAND', 'JAPAN', 'KOREA', 'CHINA'],
-    text: ''
+    m: ['01', '02', '03', '04','05', '06','07', '08','09', '10','11', '12'],
+    y: ['2018','2019','2020','2021','2022','2023','2024','2025','2026','2027']
   })
 }
 </script>
