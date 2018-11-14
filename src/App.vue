@@ -4,8 +4,8 @@
     <br>
     <br>
     <mainheader/>
-<!--
-    <router-view> </router-view> -->
+
+    <router-view> </router-view>
     <br>
     <br>
 
@@ -13,7 +13,7 @@
     <!-- <show-product-all/> -->
     <br>
     <br>
-
+  
     <br>
     <br>
 

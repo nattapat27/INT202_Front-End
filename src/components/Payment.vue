@@ -14,25 +14,30 @@
     justify-space-around
     wrap
   >
-  <v-avatar>
+  <br>
+  <v-avatar
+  size="80">
        <img
-        src="Visa-logo.jpg"
+        src="../assets/Visa-logo1.jpg"
         alt="visa"
       >
   </v-avatar>
 
-     <v-avatar>
+     <v-avatar
+     size="80">
        <img
-        src="Mastercardlogo.png.jpg"
+        src="../assets/Mastercardlogo.png"
         alt="mastercard"
       >
   </v-avatar>
- <v-avatar>
+ <v-avatar
+ size="80">
        <img
-        src="Visa-logo.jpg"
+        src="../assets/paypal.png"
         alt="paypal"
       >
   </v-avatar>
+  <br>
 
        </v-layout>
    <v-form>
