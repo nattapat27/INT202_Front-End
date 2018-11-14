@@ -4,11 +4,16 @@
     <br>
     <br>
     <mainheader/>
+<!--
+    <router-view> </router-view> -->
     <br>
     <br>
 
     <show-cart/>
     <!-- <show-product-all/> -->
+    <br>
+    <br>
+
     <br>
     <br>
 
@@ -23,12 +28,9 @@ import CarouselBanner from "./components/CarouselBanner";
 import ShowProductAll from "./components/ShowProductAll";
 import ShowCart from "./components/ShowCart";
 
-import "@mdi/font/css/materialdesignicons.css";
-import { mapActions, mapGetters } from "vuex";
-
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
-  name: "App",
+  name: 'App',
   components: {
     Delivery,
     Mainheader,
@@ -38,10 +40,10 @@ export default {
   },
 
   methods: {
-    ...mapActions(["setCurentCheckoutStatus"])
+    ...mapActions(['setCurentCheckoutStatus'])
   },
   computed: {
-    ...mapGetters(["getCurrentCheckoutStatus"])
+    ...mapGetters(['getCurrentCheckoutStatus'])
   }
-};
+}
 </script>
