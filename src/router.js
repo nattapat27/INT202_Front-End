@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import CheckoutProduct from './views/CheckoutProduct.vue'
+import ShippingStatus from './views/ShippingStatus.vue'
 
 Vue.use(Router)
 
@@ -10,8 +11,13 @@ export default new Router({
   routes: [
     {
       path: '/checkoutproduct',
-      name: 'chackout-product',
+      name: 'checkout-product',
       component: CheckoutProduct
+    },
+    {
+      path: '/shippingstatus',
+      name: 'shipping-status',
+      component: ShippingStatus
     }
   ]
 })

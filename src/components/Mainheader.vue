@@ -50,17 +50,7 @@
     color: #FFFFFF;
     border-radius: 10px;
   }
-  .test{
-    border-color: blueviolet
-  }
-
-
-
-
 </style>
-  
-   
-   
 
 <script>
 export default {

@@ -3,18 +3,18 @@
 
     <br>
     <br>
-    <mainheader/>
-    <delivery/>
+    <!-- <mainheader/>
+    <delivery/> -->
     <router-view> </router-view>
     <br>
     <br>
 
-    <show-cart/>
+    <!-- <show-cart/> -->
     <!-- <show-product-all/> -->
     <br>
     <br>
 
-    <ShowProductAll/>
+    <!-- <ShowProductAll/> -->
 
     <br>
     <br>
