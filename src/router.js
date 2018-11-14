@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/checkoutproduct',
-      name: 'chackout-product',
+      name: 'checkout-product',
       component: CheckoutProduct
     }
   ]

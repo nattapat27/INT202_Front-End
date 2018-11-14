@@ -3,14 +3,14 @@
 
     <br>
     <br>
-    <mainheader/>
-    <delivery/>
+    <mainheader v-show="getIsShowMainHeader"/>
+    <!-- <delivery/> -->
     <router-view> </router-view>
     <br>
     <br>
 
-    <show-cart/>
-    <!-- <show-product-all/> -->
+    <!-- // <show-cart/>
+    // <show-product-all/>  -->
     <br>
     <br>
   
@@ -27,7 +27,8 @@ import Mainheader from "./components/Mainheader";
 import CarouselBanner from "./components/CarouselBanner";
 import ShowProductAll from "./components/ShowProductAll";
 import ShowCart from "./components/ShowCart";
-import {mapGetters, mapActions} from 'vuex';
+import { mapGetters } from 'vuex';
+
 
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
@@ -39,12 +40,8 @@ export default {
     ShowProductAll,
     ShowCart
   },
-
-  methods: {
-    ...mapActions(['setCurentCheckoutStatus'])
-  },
   computed: {
-    ...mapGetters(['getCurrentCheckoutStatus'])
+    ...mapGetters(['getIsShowMainHeader'])
   }
 }
 </script>
