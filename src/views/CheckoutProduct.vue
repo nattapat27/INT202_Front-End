@@ -134,7 +134,9 @@
 <script>
 import Payment from '../components/Payment'
 import Delivery from '../components/Delivery'
-  export default {
+import {mapActions} from 'vuex'
+ 
+ export default {
     data () {
       return {
         e1: 0
@@ -143,6 +145,12 @@ import Delivery from '../components/Delivery'
     components: {
       Payment,
       Delivery
+    },
+    methods: {
+      ...mapActions(['setIsShowMainHeader'])
+    },
+    mounted(){
+      this.setIsShowMainHeader(false)
     }
   }
 </script>

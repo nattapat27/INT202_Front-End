@@ -19,5 +19,11 @@ export default new Router({
       name: 'shipping-status',
       component: ShippingStatus
     }
+    // },
+    // {
+    //   path: '/Home',
+    //   name: 'HomePage',
+    //   component: ShippingStatus
+    // }
   ]
 })

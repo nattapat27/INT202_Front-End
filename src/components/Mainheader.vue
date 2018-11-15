@@ -1,7 +1,6 @@
   <template>
     
 
-    <!-- <v-toolbar app color="teal lighten-3"> -->
     <v-toolbar>
       <v-toolbar-title class="headline text-uppercase">
        <div>
@@ -24,13 +23,13 @@
         solo-inverted>
         </v-text-field>
 
-      </v-spacer>
-          <v-text-field
+     </v-spacer>
+         <!--   <v-text-field
             class="test"
             label="Outline"
             outline
             color="blue"
-          ></v-text-field>
+          ></v-text-field> -->
       
  
 
@@ -38,7 +37,7 @@
       <v-spacer>
         <router-link to="/checkoutproduct"> 
       <v-btn color="warning" @chick="setIsShowMainHeader(false)"> Cart  
-        <v-icon color="wthie" >shopping_cart</v-icon>
+        <v-icon color="white" >shopping_cart</v-icon>
       </v-btn>
       </router-link>
       </v-spacer>
@@ -64,7 +63,7 @@ export default {
       ...mapGetters(['getIsShowMainHeader'])
     },
     mounted() {
-       this.getIsShowMainHeader(true)
+      getIsShowMainHeader(true)
     }
 }
 </script>
