@@ -101,7 +101,7 @@
 
 .Button{
   float: right;
-  margin-right: 38%;
+  margin-right: 55%;
   margin-top: -6%;
 }
 .buttonBuyNow{
