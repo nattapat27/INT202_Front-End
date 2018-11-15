@@ -1,82 +1,320 @@
 <template>
-<router-link to="/Delivery">
+<div class="clearfix">
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dbx18w8zcnb6om4iehag/sf-air-force-1-premium-mens-shoe-Bv04G5.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $200
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        <v-btn
+          absolute
+          color="orange"
+          class="white--text"
+          fab
+          large
+          right
+          top
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+        <div class="font-weight-light grey--text title mb-2">Male's Shoe</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike SF Air Force 1</h3>
+        <div class="font-weight-light title mb-2">
+          A hoops icon toughens up 
+        
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
 
-<div >
- <div >
-     <center>
-        <table >
-          <tr>
-              <td class="sizepic" v-for="(item,i) in items" :key="i"><button type="submit"><img :src="item.src" class="image"></button></td>
 
-              </tr>
-              <tr>
-                   <td class="sizepic" v-for="(items2,i) in items2" :key="i"><button type="submit"><img :src="items2.src" class="image"></button></td>
-              </tr>
-        </table>
-     </center>
 
- </div>
- </div>
- </router-link>
+<div class="point">
+   <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/vdigc6gyh5q5mt7xhaxq/air-max-95-lx-womens-shoe-dvKnL7.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $180
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        <v-btn
+          absolute
+          color="orange"
+          class="white--text"
+          fab
+          large
+          right
+          top
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+        <div class="font-weight-light grey--text title mb-2">Female's Shoe</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Air Max 95 LX</h3>
+        <div class="font-weight-light title mb-2">
+          Designed for everyday<br> 
+          
+          
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+<div class="point">
+   <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bro9u5xax8oxkpk9ajcx/air-max-95-og-womens-shoe-PATZevKR.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $180
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        <v-btn
+          absolute
+          color="orange"
+          class="white--text"
+          fab
+          large
+          right
+          top
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+        <div class="font-weight-light grey--text title mb-2">Female's Shoe</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Air Max 95 OG</h3>
+        <div class="font-weight-light title mb-2">
+           Women's Shoe celebrates <br>
+      
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+  </div>
+  <br>
+  <br>
+  <div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/evvc5zdxnk20ng3ullqt/tempo-womens-running-shorts-Rp6WJK.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $35
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        <v-btn
+          absolute
+          color="orange"
+          class="white--text"
+          fab
+          large
+          right
+          top
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+        <div class="font-weight-light grey--text title mb-2">Women's Running Shorts</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Tempo</h3>
+        <div class="font-weight-light title mb-2">
+          Women's Running Shorts
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
 
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/oakn9dxwjbkckoyv1tkf/sportswear-womens-long-sleeve-t-shirt-QK4lhZ.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $40
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        <v-btn
+          absolute
+          color="orange"
+          class="white--text"
+          fab
+          large
+          right
+          top
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+        <div class="font-weight-light grey--text title mb-2">Women's Long-Sleeve T-Shirt</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Sportswear</h3>
+        <div class="font-weight-light title mb-2">
+          Made with a soft cotton 
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/vdpnp9xewi7unqvswjn8/womens-long-sleeve-training-wrap-G4hNWs.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $90
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        <v-btn
+          absolute
+          color="orange"
+          class="white--text"
+          fab
+          large
+          right
+          top
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+        <div class="font-weight-light grey--text title mb-2">Training Wrap</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike</h3>
+        <div class="font-weight-light title mb-2">
+         made with thermal fleece
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+</div>
 </template>
 <script>
-export default {
-  data () {
-    return {
-      items: [
-        {
-          src:
-            'https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto/uwjw39b1xdsbtmfnxjqm/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-tanjun-v2TE01RG.jpg'
-        },
-        {
-          src:
-            'https://i2.cdscdn.com/pdt2/5/1/0/1/700x700/mp08510510/rw/nike-air-max-95-chaussure-de-running-homme-blanc.jpg'
-        },
-        {
-          src:
-            'https://media.shopat24.com/pdmain/348408_010_AW_01.jpg'
-        },
-        {
-          src:
-          'https://fh.lnwfile.com/_/fh/_raw/gu/as/n1.png'
-        }
-      ],
 
-      items2: [
-        {
-          src:
-          'https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126333-0010.png?impolicy=upright-majesty'
-        },
-        {
-          src:
-            'https://i2.cdscdn.com/pdt2/5/1/0/1/700x700/mp08510510/rw/nike-air-max-95-chaussure-de-running-homme-blanc.jpg'
-        },
-        {
-          src:
-            'https://media.shopat24.com/pdmain/348408_010_AW_01.jpg'
-        },
-        {
-          src:
-          'https://fh.lnwfile.com/_/fh/_raw/gu/as/n1.png'
-        }
-      ]
-    }
-  }
-}
 </script>
-<style scoped>
-    .sizepic{
+<style>
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
 
-        padding: 20px;
+   .point{
+     padding-left: 80px;
+     padding-bottom: 30px;
+     width: 30%;
+     float: left;
 
-    }
-    .image{
-
-        width: 200px;
-        height: 200px;
-
-    }
-
+  }
+   
+.v-card--reveal {
+   
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  width: 50%;
+}
 </style>
->
