@@ -11,6 +11,19 @@
             <p class="subtitle">$5.95
               <br>Quanlity :
                       
+                      <b-dropdown id="ddown-sm-left" text="1" size="sm" class="m-2">
+                          <b-dropdown-item href="#">1</b-dropdown-item>
+                          <b-dropdown-item href="#">2</b-dropdown-item>
+                          <b-dropdown-item href="#">3</b-dropdown-item>
+                          <b-dropdown-item href="#">4</b-dropdown-item>
+                          <b-dropdown-item href="#">5</b-dropdown-item>
+                          <b-dropdown-item href="#">6</b-dropdown-item>
+                          <b-dropdown-item href="#">7</b-dropdown-item>
+                          <b-dropdown-item href="#">8</b-dropdown-item>
+                          <b-dropdown-item href="#">9</b-dropdown-item>
+                          <b-dropdown-item href="#">10</b-dropdown-item>
+                         
+                      </b-dropdown>
             </p>
 
 <br>
