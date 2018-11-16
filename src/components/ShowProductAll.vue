@@ -242,7 +242,126 @@
 
 
 
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/qi5jezyvevxft9d1f74t/sportswear-nsw-mens-loose-fit-fleece-hoodie-h5zVbr.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $90
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Men's Loose Fit Fleece Hoodie</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Sportswear NSW
+</h3>
+        <div class="font-weight-light title mb-2">
+         made with thermal fleece
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
 
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/wbmc0smbv3oedqmqul2g/sportswear-tech-fleece-mens-pants-Ts3Wvl.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $80
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+        
+        <div class="font-weight-light grey--text title mb-2">Men's Pants
+</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Sportswear Tech Fleece
+</h3>
+        <div class="font-weight-light title mb-2">
+         made with lightweight fleece
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/s7vabs1kbr0hsujjkwuu/aerobill-h86-ear-flap-adjustable-running-hat-pVpRB2.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $35
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Adjustable Running Hat</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike AeroBill H86 Ear Flap
+</h3>
+        <div class="font-weight-light title mb-2">
+        A classic adjustable cap
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
 
 
 
