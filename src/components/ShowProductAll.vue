@@ -1,82 +1,397 @@
 <template>
-<!-- <router-link to="/Delivery"> -->
+<div class="clearfix">
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_4952fcea.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $5.95
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+       
+          <v-icon>mdi-cart</v-icon>
+        
+        <div class="font-weight-light grey--text title mb-2">Plush & Stuffed Animals</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Ralph Breaks</h3>
+        <div class="font-weight-light title mb-2">
+          Inspired by Ralph Breaks
+        
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
 
-<div >
- <div >
-     <center>
-        <table >
-          <tr>
-              <td class="sizepic" v-for="(item,i) in items" :key="i"><button type="submit"><img :src="item.src" class="image"></button></td>
 
-              </tr>
-              <tr>
-                   <td class="sizepic" v-for="(items2,i) in items2" :key="i"><button type="submit"><img :src="items2.src" class="image"></button></td>
-              </tr>
-        </table>
-     </center>
 
- </div>
- </div>
- <!-- </router-link> -->
+<div class="point">
+   <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_12ffda0f.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $16.95
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+        
+        <div class="font-weight-light grey--text title mb-2">Bed & Bath</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Alien Fleece Throw</h3>
+        <div class="font-weight-light title mb-2">
+          Designed for everyday<br> 
+          
+          
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+<div class="point">
+   <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bro9u5xax8oxkpk9ajcx/air-max-95-og-womens-shoe-PATZevKR.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $180
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Female's Shoe</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Air Max 95 OG</h3>
+        <div class="font-weight-light title mb-2">
+           Women's Shoe celebrates <br>
+      
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+  </div>
+  <br>
+  <br>
+  <div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_ab0635ea.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $29.95
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Socks & Underwear</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Mickey Mouse Rattle Socks</h3>
+        <div class="font-weight-light title mb-2">
+          Women's Running Shorts
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
 
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_1f5ba043.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $16.95
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Pajamas & Sleepwear</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Incredibles Logo PJ PALS for Baby</h3>
+        <div class="font-weight-light title mb-2">
+          Made with a soft cotton 
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/ttdywohkvejrimrvbnxy/hurley-one-and-only-perfect-womens-crew-PtnbVf.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $25
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+       
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Woman Crew</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Hurley One And Only Perfect
+</h3>
+        <div class="font-weight-light title mb-2">
+         made with thermal fleece
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+
+
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/qi5jezyvevxft9d1f74t/sportswear-nsw-mens-loose-fit-fleece-hoodie-h5zVbr.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $90
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Men's Loose Fit Fleece Hoodie</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Sportswear NSW
+</h3>
+        <div class="font-weight-light title mb-2">
+         made with thermal fleece
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/wbmc0smbv3oedqmqul2g/sportswear-tech-fleece-mens-pants-Ts3Wvl.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $80
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+        
+        <div class="font-weight-light grey--text title mb-2">Men's Pants
+</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Sportswear Tech Fleece
+</h3>
+        <div class="font-weight-light title mb-2">
+         made with lightweight fleece
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+<div class="point" >
+  <v-hover >
+    <v-card
+      slot-scope="{ hover }"
+      class="mx-auto"
+      color="grey lighten-4"
+      max-width="600"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/s7vabs1kbr0hsujjkwuu/aerobill-h86-ear-flap-adjustable-running-hat-pVpRB2.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
+            style="height: 100%;"
+          >
+            $35
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-4"
+        style="position: relative;"
+      >
+        
+          <v-icon>mdi-cart</v-icon>
+       
+        <div class="font-weight-light grey--text title mb-2">Adjustable Running Hat</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Nike AeroBill H86 Ear Flap
+</h3>
+        <div class="font-weight-light title mb-2">
+        A classic adjustable cap
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</div>
+
+
+
+</div>
 </template>
 <script>
-export default {
-  data () {
-    return {
-      items: [
-        {
-          src:
-            'https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto/uwjw39b1xdsbtmfnxjqm/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-tanjun-v2TE01RG.jpg'
-        },
-        {
-          src:
-            'https://i2.cdscdn.com/pdt2/5/1/0/1/700x700/mp08510510/rw/nike-air-max-95-chaussure-de-running-homme-blanc.jpg'
-        },
-        {
-          src:
-            'https://media.shopat24.com/pdmain/348408_010_AW_01.jpg'
-        },
-        {
-          src:
-          'https://fh.lnwfile.com/_/fh/_raw/gu/as/n1.png'
-        }
-      ],
 
-      items2: [
-        {
-          src:
-          'https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126333-0010.png?impolicy=upright-majesty'
-        },
-        {
-          src:
-            'https://i2.cdscdn.com/pdt2/5/1/0/1/700x700/mp08510510/rw/nike-air-max-95-chaussure-de-running-homme-blanc.jpg'
-        },
-        {
-          src:
-            'https://media.shopat24.com/pdmain/348408_010_AW_01.jpg'
-        },
-        {
-          src:
-          'https://fh.lnwfile.com/_/fh/_raw/gu/as/n1.png'
-        }
-      ]
-    }
-  }
-}
 </script>
-<style scoped>
-    .sizepic{
+<style>
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
 
-        padding: 20px;
+   .point{
+     padding-left: 80px;
+     padding-bottom: 30px;
+     width: 30%;
+     float: left;
 
-    }
-    .image{
-
-        width: 200px;
-        height: 200px;
-
-    }
-
+  }
+   
+.v-card--reveal {
+   
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  width: 50%;
+}
 </style>
->
