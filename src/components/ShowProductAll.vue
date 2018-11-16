@@ -10,7 +10,7 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dbx18w8zcnb6om4iehag/sf-air-force-1-premium-mens-shoe-Bv04G5.jpg"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_4952fcea.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
       >
         <v-expand-transition>
           <div
@@ -18,7 +18,7 @@
             class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            $200
+            $5.95
           </div>
         </v-expand-transition>
       </v-img>
@@ -26,21 +26,13 @@
         class="pt-4"
         style="position: relative;"
       >
-        <v-btn
-          absolute
-          color="orange"
-          class="white--text"
-          fab
-          large
-          right
-          top
-        >
+       
           <v-icon>mdi-cart</v-icon>
-        </v-btn>
-        <div class="font-weight-light grey--text title mb-2">Male's Shoe</div>
-        <h3 class="display-1 font-weight-light orange--text mb-2">Nike SF Air Force 1</h3>
+        
+        <div class="font-weight-light grey--text title mb-2">Plush & Stuffed Animals</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Ralph Breaks</h3>
         <div class="font-weight-light title mb-2">
-          A hoops icon toughens up 
+          Inspired by Ralph Breaks
         
         </div>
       </v-card-text>
@@ -60,7 +52,7 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/vdigc6gyh5q5mt7xhaxq/air-max-95-lx-womens-shoe-dvKnL7.jpg"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_12ffda0f.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
       >
         <v-expand-transition>
           <div
@@ -68,7 +60,7 @@
             class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            $180
+            $16.95
           </div>
         </v-expand-transition>
       </v-img>
@@ -76,19 +68,11 @@
         class="pt-4"
         style="position: relative;"
       >
-        <v-btn
-          absolute
-          color="orange"
-          class="white--text"
-          fab
-          large
-          right
-          top
-        >
+        
           <v-icon>mdi-cart</v-icon>
-        </v-btn>
-        <div class="font-weight-light grey--text title mb-2">Female's Shoe</div>
-        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Air Max 95 LX</h3>
+        
+        <div class="font-weight-light grey--text title mb-2">Bed & Bath</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Alien Fleece Throw</h3>
         <div class="font-weight-light title mb-2">
           Designed for everyday<br> 
           
@@ -124,17 +108,9 @@
         class="pt-4"
         style="position: relative;"
       >
-        <v-btn
-          absolute
-          color="orange"
-          class="white--text"
-          fab
-          large
-          right
-          top
-        >
+        
           <v-icon>mdi-cart</v-icon>
-        </v-btn>
+       
         <div class="font-weight-light grey--text title mb-2">Female's Shoe</div>
         <h3 class="display-1 font-weight-light orange--text mb-2">Nike Air Max 95 OG</h3>
         <div class="font-weight-light title mb-2">
@@ -157,7 +133,7 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/evvc5zdxnk20ng3ullqt/tempo-womens-running-shorts-Rp6WJK.jpg"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_ab0635ea.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
       >
         <v-expand-transition>
           <div
@@ -165,7 +141,7 @@
             class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            $35
+            $29.95
           </div>
         </v-expand-transition>
       </v-img>
@@ -173,19 +149,11 @@
         class="pt-4"
         style="position: relative;"
       >
-        <v-btn
-          absolute
-          color="orange"
-          class="white--text"
-          fab
-          large
-          right
-          top
-        >
+        
           <v-icon>mdi-cart</v-icon>
-        </v-btn>
-        <div class="font-weight-light grey--text title mb-2">Women's Running Shorts</div>
-        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Tempo</h3>
+       
+        <div class="font-weight-light grey--text title mb-2">Socks & Underwear</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Mickey Mouse Rattle Socks</h3>
         <div class="font-weight-light title mb-2">
           Women's Running Shorts
         </div>
@@ -204,7 +172,7 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/oakn9dxwjbkckoyv1tkf/sportswear-womens-long-sleeve-t-shirt-QK4lhZ.jpg"
+        src="https://lumiere-a.akamaihd.net/v1/images/file_1f5ba043.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8"
       >
         <v-expand-transition>
           <div
@@ -212,7 +180,7 @@
             class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            $40
+            $16.95
           </div>
         </v-expand-transition>
       </v-img>
@@ -220,19 +188,10 @@
         class="pt-4"
         style="position: relative;"
       >
-        <v-btn
-          absolute
-          color="orange"
-          class="white--text"
-          fab
-          large
-          right
-          top
-        >
           <v-icon>mdi-cart</v-icon>
-        </v-btn>
-        <div class="font-weight-light grey--text title mb-2">Women's Long-Sleeve T-Shirt</div>
-        <h3 class="display-1 font-weight-light orange--text mb-2">Nike Sportswear</h3>
+       
+        <div class="font-weight-light grey--text title mb-2">Pajamas & Sleepwear</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Incredibles Logo PJ PALS for Baby</h3>
         <div class="font-weight-light title mb-2">
           Made with a soft cotton 
         </div>
@@ -251,7 +210,7 @@
     >
       <v-img
         :aspect-ratio="16/9"
-        src="https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/vdpnp9xewi7unqvswjn8/womens-long-sleeve-training-wrap-G4hNWs.jpg"
+        src="https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/ttdywohkvejrimrvbnxy/hurley-one-and-only-perfect-womens-crew-PtnbVf.jpg"
       >
         <v-expand-transition>
           <div
@@ -259,7 +218,7 @@
             class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            $90
+            $25
           </div>
         </v-expand-transition>
       </v-img>
@@ -267,19 +226,12 @@
         class="pt-4"
         style="position: relative;"
       >
-        <v-btn
-          absolute
-          color="orange"
-          class="white--text"
-          fab
-          large
-          right
-          top
-        >
+       
           <v-icon>mdi-cart</v-icon>
-        </v-btn>
-        <div class="font-weight-light grey--text title mb-2">Training Wrap</div>
-        <h3 class="display-1 font-weight-light orange--text mb-2">Nike</h3>
+       
+        <div class="font-weight-light grey--text title mb-2">Woman Crew</div>
+        <h3 class="display-1 font-weight-light orange--text mb-2">Hurley One And Only Perfect
+</h3>
         <div class="font-weight-light title mb-2">
          made with thermal fleece
         </div>
@@ -287,6 +239,12 @@
     </v-card>
   </v-hover>
 </div>
+
+
+
+
+
+
 
 </div>
 </template>
