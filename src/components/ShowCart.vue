@@ -1,4 +1,6 @@
 <template>
+
+
     <div>
         <!-- <center><h1 class="header">Added To Cart</h1></center> -->
 
@@ -6,24 +8,38 @@
             <img src="https://bit.ly/2FlUDt7" style="width: 250px" height="250px">
         </div>
 
+        
+
         <div><p class="titleProduct">Ralph Breaks the Internet
             <br> Mini ''Tsum Tsum'' Collection</p><br>
             <p class="subtitle">$5.95
-              <br>Quanlity :
-                      <b-dropdown id="ddown-sm-left" text="1" size="sm" class="m-2">
-                          <b-dropdown-item href="#">1</b-dropdown-item>
-                          <b-dropdown-item href="#">2</b-dropdown-item>
-                          <b-dropdown-item href="#">3</b-dropdown-item>
-                          <b-dropdown-item href="#">4</b-dropdown-item>
-                          <b-dropdown-item href="#">5</b-dropdown-item>
-                          <b-dropdown-item href="#">6</b-dropdown-item>
-                          <b-dropdown-item href="#">7</b-dropdown-item>
-                          <b-dropdown-item href="#">8</b-dropdown-item>
-                          <b-dropdown-item href="#">9</b-dropdown-item>
-                          <b-dropdown-item href="#">10</b-dropdown-item>
+             <br> Quanlity : 
+                <b-dropdown border: variant="#ffffff" id="ddown-sm-left" text="1" size="sm" class="m-2">
+                          <b-dropdown-item >1</b-dropdown-item>
+                          <b-dropdown-item>2</b-dropdown-item>
+                          <b-dropdown-item >3</b-dropdown-item>
+                          <b-dropdown-item >4</b-dropdown-item>
+                          <b-dropdown-item>5</b-dropdown-item>
+                          <b-dropdown-item >6</b-dropdown-item>
+                          <b-dropdown-item>7</b-dropdown-item>
+                          <b-dropdown-item>8</b-dropdown-item>
+                          <b-dropdown-item>9</b-dropdown-item>
+                          <b-dropdown-item>10</b-dropdown-item>
                          
                       </b-dropdown>
-            </p>
+               
+                </p>
+              
+              
+              </div>
+
+
+
+
+            
+            
+
+            
 
 <br>
   
@@ -60,7 +76,7 @@
                       - 3 1/2” L
                       - Imported
                       </p>
-                  </div>
+                  
         </div>
           
     </div>
@@ -70,8 +86,10 @@
 
 
 <script>
-
+  
 </script>
+
+
 
 <style scoped>
 .imageProduct {
@@ -93,7 +111,7 @@
   color: #979BA9;
   font-size: 12px;
   float: right;
-  margin-right: 54.5%;
+  margin-right: 57.6%;
   margin-top: -11%;
 } 
 /* .buttonContinueShopping {
@@ -142,5 +160,12 @@
   margin-left: 18%;
   color: #979BA9;
 }
+
+#ddown-sm-left{
+  border: 0.5px solid #979BA9;
+  border-radius: 20%;
+}
+
+
 
 </style>
