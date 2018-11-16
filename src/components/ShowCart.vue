@@ -10,18 +10,7 @@
             <br> Mini ''Tsum Tsum'' Collection</p><br>
             <p class="subtitle">$5.95
               <br>Quanlity :
-                      <b-dropdown id="ddown-sm-split" size="sm" split text="1" class="m-2">
-                          <b-dropdown-item-button>1</b-dropdown-item-button>
-                          <b-dropdown-item-button>2</b-dropdown-item-button>
-                          <b-dropdown-item-button>3</b-dropdown-item-button>
-                          <b-dropdown-item-button>4</b-dropdown-item-button>
-                          <b-dropdown-item-button>5</b-dropdown-item-button>
-                          <b-dropdown-item-button>6</b-dropdown-item-button>
-                          <b-dropdown-item-button>7</b-dropdown-item-button>
-                          <b-dropdown-item-button>8</b-dropdown-item-button>
-                          <b-dropdown-item-button>9</b-dropdown-item-button>
-                          <b-dropdown-item-button>10</b-dropdown-item-button>
-                      </b-dropdown>
+                      
             </p>
 
 <br>
@@ -29,37 +18,12 @@
             
           <div class="Button">
             <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>   
-
+            <v-btn class="buttonAddToShoppingCart" color="#5670BA" large>Add to Shopping Cart</v-btn>
           <br><br><br><br>
          
           
           </div>
-          <center><div> <p class="underline">__________________________________________________________________________________________________________________________________________________</p>
-          </div></center>
-
-
-
-                  <div class="ProductDetail">
-                        <p class="ProductDetailTitle">Product Details</p>
-                        <br>
-                  <p class="subheader">Item No. 1234041281402P</p>
-                      <p class="bodyText">Retro video game bad guy Wreck-It Ralph will make a great addition to your <br>
-                      mini “Tsum Tsum”  plush collection. Inspired by Ralph Breaks the Internet, <br>
-                      this adorable plush is ready to wreck it!
-                      </p>
-                     <p class="subheader">Details</p>
-                      <p class="bodyText">- Mini “Tsum Tsum” plush <br>
-                      - Embroidered features <br>
-                      - Soft, squeezable fill with beans in belly <br>
-                      - Fuzzy plush texturing <br>
-                      - Part of our Ralph Breaks the Internet Mini “Tsum Tsum” Plush Collection</p>
-
-                       <p class="subheader">The bare necessities</p>
-                      <p class="bodyText">- Polyester/ plastic pellets
-                      - 3 1/2” L
-                      - Imported
-                      </p>
-                  </div>
+          
         </div>
           
     </div>
@@ -92,7 +56,7 @@
   color: #979BA9;
   font-size: 12px;
   float: right;
-  margin-right: 55%;
+  margin-right: 54.5%;
   margin-top: -11%;
 } 
 /* .buttonContinueShopping {
@@ -101,7 +65,7 @@
 
 .Button{
   float: right;
-  margin-right: 55%;
+  margin-right: 38%;
   margin-top: -6%;
 }
 .buttonBuyNow{
@@ -111,31 +75,11 @@
   margin-top: -6%; */
 }
 
+.buttonAddToShoppingCart{
+  color: #ffffff;
 
-
-.underline{
-  color: #979BA9;
+ 
 }
 
-.ProductDetailTitle{
-  color: #979BA9;
-  font-size: 16px;
-  font-weight: bold;
-  color: #979BA9;
-  margin-top: 2%;
-  margin-left: 18%;
-}
-
-.subheader{
-  font-weight: bold;
-  font-size: 12px;
-  margin-left: 18%;
-  color: #979BA9;
-}
-
-.bodyText{
-  margin-left: 18%;
-  color: #979BA9;
-}
 
 </style>
