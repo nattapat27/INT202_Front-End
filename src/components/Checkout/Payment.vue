@@ -18,7 +18,7 @@
   <v-avatar
   size="80">
        <img
-        src="../assets/Visa-logo1.jpg"
+        src="@/assets/Visa-logo1.jpg"
         alt="visa"
       >
   </v-avatar>
@@ -26,17 +26,18 @@
      <v-avatar
      size="80">
        <img
-        src="../assets/Mastercardlogo.png"
+        src="@/assets/Mastercardlogo.png"
         alt="mastercard"
       >
   </v-avatar>
- <v-avatar
+
+    <v-avatar
  size="80">
        <img
-        src="../assets/paypal.png"
+        src="@/assets/paypal.png"
         alt="paypal"
-      >
-  </v-avatar>
+       >
+      </v-avatar>
   <br>
 
        </v-layout>
@@ -99,11 +100,12 @@
 </v-card>
 </v-container>
 </template>
+
 <script>
 export default {
   data: () => ({
-    m: ['01', '02', '03', '04','05', '06','07', '08','09', '10','11', '12'],
-    y: ['2018','2019','2020','2021','2022','2023','2024','2025','2026','2027']
+    m: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+    y: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027']
   })
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-<router-link to="/Delivery">
+<!-- <router-link to="/Delivery"> -->
 
 <div >
  <div >
@@ -17,7 +17,7 @@
 
  </div>
  </div>
- </router-link>
+ <!-- </router-link> -->
 
 </template>
 <script>

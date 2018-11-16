@@ -1,6 +1,6 @@
   <template>
   <v-card>
-      
+
     <br>
        <v-stepper v-model="e1">
     <v-stepper-header>
@@ -34,7 +34,7 @@
       <v-stepper-content step="2">
         <img src="../assets/confirmation-2.png" alt="visa">
         SELLER HAS CONFIRMED YOUR ORDER
-        
+
         <v-btn
           color="primary"
           @click="e1 = 1"
@@ -81,11 +81,11 @@
         </v-btn>
       </v-stepper-content>
     </v-stepper-items>
-  </v-stepper> 
+  </v-stepper>
   </v-card>
 </template>
 
-<style scoped> 
+<style scoped>
   #fontcolor {
     font-family: 'Montserrat';
     font-size: 20;
@@ -96,17 +96,12 @@
 </style>
 
 <script>
-import Payment from '../components/Payment'
-import Delivery from '../components/Delivery'
-  export default {
-    data () {
-      return {
-        e1: 0
-      }
-    },
-    components: {
-      Payment,
-      Delivery
+
+export default {
+  data () {
+    return {
+      e1: 0
     }
   }
+}
 </script>

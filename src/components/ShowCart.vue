@@ -4,22 +4,19 @@
 
         <div class="ImageProductInCart">
             <img src="https://bit.ly/2FlUDt7" style="width: 200px" height="200px">
-        
 
         <p class="titleProduct">Ralph Breaks the Internet
             <br> Mini ''Tsum Tsum'' Collection</p><br><p class="subtitle">Qty: 1 at $5.95</p>
 
 <br>
-  
+
             <v-btn color="#D1D0CE" large >Continue Shopping</v-btn>
-          
+
             <v-btn color="#5cb3ff" large>Continue Shopping</v-btn></div>
-          
+
     </div>
 
-    
 </template>
-
 
 <script>
 
@@ -48,6 +45,6 @@
 }
 
 /* .buttonContinueShopping {
-  
+
 } */
 </style>

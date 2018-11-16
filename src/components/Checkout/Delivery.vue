@@ -1,18 +1,18 @@
 <template>
 
 <v-container grid-list-md text-xs-left>
-    
+
 <v-card >
-   
+
   <br>
   <br>
      <h1 class="text-md-left">    DELIVERY  </h1>
    <v-form>
     <v-container>
       <v-layout row wrap>
-       
+
         <v-flex xs12 sm6>
-          FIRST NAME 
+          FIRST NAME
           <v-text-field
             label="First name"
             single-line
@@ -76,7 +76,7 @@
                      solo >
      </b-form-textarea>
         </v-flex>
- 
+
         <v-flex xs12 sm6>
           ZIPCODE
           <v-text-field
@@ -93,10 +93,10 @@
 </v-container>
 </template>
 <script>
-  export default {
-    data: () => ({
-      items: ['THAILAND', 'JAPAN', 'KOREA', 'CHINA'],
-      text: ''
-    })
-  }
+export default {
+  data: () => ({
+    items: ['THAILAND', 'JAPAN', 'KOREA', 'CHINA'],
+    text: ''
+  })
+}
 </script>

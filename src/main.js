@@ -10,16 +10,14 @@ import BootstrapVue from 'bootstrap-vue'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
-
 Vue.use(Vuetify, {
   iconfont: 'mdi'
 })
 
 Vue.use(BootstrapVue)
 
-// hello
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')

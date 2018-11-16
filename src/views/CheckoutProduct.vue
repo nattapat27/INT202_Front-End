@@ -1,7 +1,8 @@
   <template>
+  <v-app>
   <v-card>
     <br>
-       <v-stepper v-model="e1">
+    <v-stepper v-model="e1">
     <v-stepper-header>
       <v-stepper-step :complete="e1 > 1" step="1">CART</v-stepper-step>
 
@@ -16,7 +17,7 @@
       <v-divider></v-divider>
 
       <v-stepper-step step="4">COMFIRMATION</v-stepper-step>
-      
+
     </v-stepper-header>
 
     <v-stepper-items>
@@ -27,11 +28,11 @@
           height="200px"
         ></v-card>
 
-
         <v-layout class="text-xs-right"
          justify-space-around>
-        
-         <v-btn flat>Cancel</v-btn>
+          <router-link to="/">
+         <v-btn  @click="setIsShowMainHeader(true)">Back to shopping</v-btn>
+          </router-link>
         <v-spacer></v-spacer>
             <v-spacer></v-spacer>
              <v-spacer></v-spacer>
@@ -39,7 +40,7 @@
         <br>
         <v-btn
           color="primary"
-          @click="e1 = 2"  
+          @click="e1 = 2"
         >
           Next
         </v-btn>
@@ -47,7 +48,7 @@
       </v-stepper-content>
 
       <v-stepper-content step="2">
-      
+
             <delivery/>
      <v-layout class="text-xs-right"
          justify-space-around>
@@ -69,7 +70,6 @@
         </v-btn>
      </v-layout>
 
-        
       </v-stepper-content>
 
       <v-stepper-content step="3">
@@ -77,7 +77,7 @@
 
       <v-layout class="text-xs-right"
          justify-space-around>
-        
+
         <v-btn
           color="primary"
           @click="e1 = 2"
@@ -96,11 +96,7 @@
         </v-btn>
       </v-layout>
 
-        
       </v-stepper-content>
-
-
-
 
       <v-stepper-content step="4">
         <v-card
@@ -121,36 +117,35 @@
           Back
         </v-btn>
         </v-layout>
-        
+
       </v-stepper-content>
 
-
-      
     </v-stepper-items>
   </v-stepper>
   </v-card>
-    </template>
+  </v-app>
+</template>
 
 <script>
-import Payment from '../components/Payment'
-import Delivery from '../components/Delivery'
-import {mapActions} from 'vuex'
- 
- export default {
-    data () {
-      return {
-        e1: 0
-      }
-    },
-    components: {
-      Payment,
-      Delivery
-    },
-    methods: {
-      ...mapActions(['setIsShowMainHeader'])
-    },
-    mounted(){
-      this.setIsShowMainHeader(false)
+import Payment from '../components/Checkout/Payment'
+import Delivery from '../components/Checkout/Delivery'
+import { mapActions } from 'vuex'
+
+export default {
+  data () {
+    return {
+      e1: 0
     }
+  },
+  components: {
+    Payment,
+    Delivery
+  },
+  methods: {
+    ...mapActions(['setIsShowMainHeader'])
+  },
+  mounted () {
+    this.setIsShowMainHeader(false)
   }
+}
 </script>

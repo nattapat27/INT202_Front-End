@@ -1,20 +1,32 @@
   <template>
-    
+    <div >
+      <!-- <v-layout justify-center>
+         <v-spacer>
+      </v-spacer>
+        <v-btn fab dark small="7pt">
+              <v-icon>account_circle</v-icon>
+            </v-btn>
 
-    <v-toolbar>
+      </v-layout> -->
+      <v-toolbar slot="header" class="mb-2" height="110pt"  >
       <v-toolbar-title class="headline text-uppercase">
-       <div>
+
+          <v-divider> </v-divider>
           <v-btn color="#7F63BA" id="fontcolor">All Categories</v-btn>
           <v-btn color="#F6B94D" id="fontcolor">Best Seller</v-btn>
           <v-btn color="#DA5786" id="fontcolor">Super deal</v-btn>
           <v-btn color="#F08B49" id="fontcolor">Event coupon</v-btn>
-      </div>
+
       </v-toolbar-title>
       <v-spacer>
-
       </v-spacer>
+
       <v-spacer>
-        <v-text-field   
+        <br>
+      <br>
+      <br>
+
+        <v-text-field
         append-icon="mic"
         class="mx-3"
         flat
@@ -24,28 +36,28 @@
         </v-text-field>
 
      </v-spacer>
-         <!--   <v-text-field
+           <!-- <v-text-field
             class="test"
             label="Outline"
             outline
             color="blue"
           ></v-text-field> -->
-      
- 
-
 
       <v-spacer>
-        <router-link to="/checkoutproduct"> 
-      <v-btn color="warning" @chick="setIsShowMainHeader(false)"> Cart  
+        <br>
+      <br>
+      <br>
+        <router-link to="/checkoutproduct">
+      <v-btn color="warning" @chick="setIsShowMainHeader(false)"> Cart
         <v-icon color="white" >shopping_cart</v-icon>
       </v-btn>
       </router-link>
       </v-spacer>
     </v-toolbar>
-
+    </div>
    </template>
-   
-<style scoped> 
+
+<style scoped>
   #fontcolor {
     font-family: 'Montserrat';
     font-size: 20;
@@ -56,16 +68,25 @@
 </style>
 
 <script>
-import  {mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
-    name: 'checkout',
-    computed: {
-      ...mapGetters(['getIsShowMainHeader'])
-    },
-    mounted() {
-      getIsShowMainHeader(true)
-    }
+  data: () => ({
+    items: [
+      { title: 'Click Me' },
+      { title: 'Click Me' },
+      { title: 'Click Me' },
+      { title: 'Click Me 2' }
+    ]
+  }),
+  name: 'checkout',
+  computed: {
+    // ...mapGetters(['getIsShowMainHeader'])
+  },
+  methods: {
+    ...mapActions(['setIsShowMainHeader'])
+  },
+  mounted () {
+    this.setIsShowMainHeader(true)
+  }
 }
 </script>
-
-

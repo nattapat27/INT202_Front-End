@@ -1,6 +1,6 @@
 <template>
   <v-app>
-
+    <v-content>
     <br>
     <br>
     <mainheader v-show="getIsShowMainHeader"/>
@@ -14,23 +14,22 @@
     <br>
     <br>
 
-    <!-- <ShowProductAll/> -->
+    <ShowProductAll/>
 
     <br>
     <br>
-
+    </v-content>
   </v-app>
 
 </template>
 
 <script>
-import Delivery from "./components/Delivery";
-import Mainheader from "./components/Mainheader";
-import CarouselBanner from "./components/CarouselBanner";
-import ShowProductAll from "./components/ShowProductAll";
-import ShowCart from "./components/ShowCart";
-import { mapGetters } from 'vuex';
-
+import Delivery from './components/Checkout/Delivery'
+import Mainheader from './components/Mainheader'
+import CarouselBanner from './components/CarouselBanner'
+import ShowProductAll from './components/ShowProductAll'
+import ShowCart from './components/ShowCart'
+import { mapGetters } from 'vuex'
 
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า

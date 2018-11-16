@@ -2,7 +2,7 @@
 
 <center><div>
 
-  <router-link to="/Delivery">
+  <!-- <router-link to="/Delivery"> -->
   <v-carousel id="product">
   <v-carousel-item
 
@@ -12,7 +12,7 @@
     >
     </v-carousel-item>
   </v-carousel>
-  </router-link>
+  <!-- </router-link> -->
 
 </div></center>
 </template>
