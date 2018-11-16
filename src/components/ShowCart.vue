@@ -10,7 +10,6 @@
             <br> Mini ''Tsum Tsum'' Collection</p><br>
             <p class="subtitle">$5.95
               <br>Quanlity :
-                      
                       <b-dropdown id="ddown-sm-left" text="1" size="sm" class="m-2">
                           <b-dropdown-item href="#">1</b-dropdown-item>
                           <b-dropdown-item href="#">2</b-dropdown-item>
@@ -36,7 +35,32 @@
          
           
           </div>
-          
+          <center><div> <p class="underline">__________________________________________________________________________________________________________________________________________________</p>
+          </div></center>
+
+
+
+                  <div class="ProductDetail">
+                        <p class="ProductDetailTitle">Product Details</p>
+                        <br>
+                  <p class="subheader">Item No. 1234041281402P</p>
+                      <p class="bodyText">Retro video game bad guy Wreck-It Ralph will make a great addition to your <br>
+                      mini “Tsum Tsum”  plush collection. Inspired by Ralph Breaks the Internet, <br>
+                      this adorable plush is ready to wreck it!
+                      </p>
+                     <p class="subheader">Details</p>
+                      <p class="bodyText">- Mini “Tsum Tsum” plush <br>
+                      - Embroidered features <br>
+                      - Soft, squeezable fill with beans in belly <br>
+                      - Fuzzy plush texturing <br>
+                      - Part of our Ralph Breaks the Internet Mini “Tsum Tsum” Plush Collection</p>
+
+                       <p class="subheader">The bare necessities</p>
+                      <p class="bodyText">- Polyester/ plastic pellets
+                      - 3 1/2” L
+                      - Imported
+                      </p>
+                  </div>
         </div>
           
     </div>
@@ -94,5 +118,29 @@
  
 }
 
+.underline{
+  color: #979BA9;
+}
+
+.ProductDetailTitle{
+  color: #979BA9;
+  font-size: 16px;
+  font-weight: bold;
+  color: #979BA9;
+  margin-top: 2%;
+  margin-left: 18%;
+}
+
+.subheader{
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 18%;
+  color: #979BA9;
+}
+
+.bodyText{
+  margin-left: 18%;
+  color: #979BA9;
+}
 
 </style>
