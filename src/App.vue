@@ -9,12 +9,12 @@
     <br>
     <br>
 
-    <!-- // <show-cart/>
-    // <show-product-all/>  -->
+   <show-cart/>
+  
     <br>
     <br>
 
-    <ShowProductAll/>
+    
 
     <br>
     <br>
