@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-content>
-    <br>
-    <br>
+      <HeaderUser/>
+    
     <mainheader v-show="getIsShowMainHeader"/>
     <!-- <delivery/> -->
     <router-view> </router-view>
@@ -26,6 +26,7 @@
 <script>
 import Delivery from './components/Checkout/Delivery'
 import Mainheader from './components/Mainheader'
+import HeaderUser from './components/HeaderUser'
 import CarouselBanner from './components/CarouselBanner'
 import ShowProductAll from './components/ShowProductAll'
 import ShowCart from './components/ShowCart'
@@ -39,7 +40,8 @@ export default {
     Mainheader,
     CarouselBanner,
     ShowProductAll,
-    ShowCart
+    ShowCart,
+    HeaderUser
   },
   computed: {
     ...mapGetters(['getIsShowMainHeader'])

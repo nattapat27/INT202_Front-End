@@ -8,10 +8,8 @@
             </v-btn>
 
       </v-layout> -->
-      <v-toolbar slot="header" class="mb-2" height="110pt"  >
+      <v-toolbar slot="header"  height="65pt"  >
       <v-toolbar-title class="headline text-uppercase">
-
-          <v-divider> </v-divider>
           <v-btn color="#7F63BA" id="fontcolor">All Categories</v-btn>
           <v-btn color="#F6B94D" id="fontcolor">Best Seller</v-btn>
           <v-btn color="#DA5786" id="fontcolor">Super deal</v-btn>
@@ -22,9 +20,7 @@
       </v-spacer>
 
       <v-spacer>
-        <br>
-      <br>
-      <br>
+     
 
         <v-text-field
         append-icon="mic"
@@ -34,7 +30,7 @@
         prepend-inner-icon="search"
         solo-inverted>
         </v-text-field>
-
+    <v-spacer></v-spacer>
      </v-spacer>
            <!-- <v-text-field
             class="test"
@@ -44,9 +40,6 @@
           ></v-text-field> -->
 
       <v-spacer>
-        <br>
-      <br>
-      <br>
         <router-link to="/checkoutproduct">
       <v-btn color="warning" @chick="setIsShowMainHeader(false)"> Cart
         <v-icon color="white" >shopping_cart</v-icon>
