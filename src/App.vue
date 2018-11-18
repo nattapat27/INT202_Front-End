@@ -9,8 +9,8 @@
     <br>
     <br>
 
-    <!-- // <show-cart/>
-    // <show-product-all/>  -->
+    
+     <show-product-all/>
     <br>
     <br>
 <br>

@@ -5,7 +5,15 @@
         <!-- <center><h1 class="header">Added To Cart</h1></center> -->
 
         <div class="imageProduct">
-            <img src="https://bit.ly/2FlUDt7" style="width: 250px" height="250px">
+            <v-carousel style="width: 250px" height="250px" margin-top="50px">
+              <v-carousel-item
+
+                 v-for="(item,i) in items"
+                   :key="i"
+                   :src="item.src"
+                 >
+               </v-carousel-item>
+              </v-carousel>
         </div>
 
         
@@ -85,7 +93,30 @@
 </template>
 
 <script>
-  
+  export default {
+  data () {
+    return {
+      items: [
+        {
+          src:
+            'https://bit.ly/2FlUDt7'
+        },
+        {
+          src:
+            'https://lumiere-a.akamaihd.net/v1/images/file_5fc12993.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8'
+        },
+        {
+          src:
+            'https://lumiere-a.akamaihd.net/v1/images/file_bbf36b2c.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8'
+        },
+        {
+          src:
+            'https://lumiere-a.akamaihd.net/v1/images/file_02006476.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 
