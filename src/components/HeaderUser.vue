@@ -9,7 +9,16 @@
       tile
     >
       <v-card-title class="teal">
-        <strong class="subheading">LOGO </strong>
+        <strong class="subheading">
+             <!-- <v-avatar
+                size="80">
+       <img
+        src="@/assets/Visa-logo1.jpg"
+        alt="visa"
+      >
+  </v-avatar> -->
+  LOGO
+  </strong> 
         <v-spacer></v-spacer>
     <v-btn fab dark small color="indigo">
       <v-icon dark>account_circle</v-icon>
