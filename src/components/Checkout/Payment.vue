@@ -2,12 +2,14 @@
 
 <v-container grid-list-md text-xs-left>
 
-<v-card >
+
+    
+ 
 
   <br>
   <br>
   <br>
-
+  
   <h1 class="text-md-left"> PAYMENT METHOD</h1>
        <v-layout
     align-center
@@ -15,6 +17,9 @@
     wrap
   >
   <br>
+      <b-form-group >
+      <b-form-radio-group id="radios2" v-model="selected" name="radioSubComponent">
+ <b-form-radio value="Visa" ></b-form-radio>
   <v-avatar
   size="80">
        <img
@@ -23,6 +28,7 @@
       >
   </v-avatar>
 
+ <b-form-radio value="MasterCard"></b-form-radio>
      <v-avatar
      size="80">
        <img
@@ -30,7 +36,8 @@
         alt="mastercard"
       >
   </v-avatar>
-
+    
+    <b-form-radio value="PayPal"></b-form-radio>
     <v-avatar
  size="80">
        <img
@@ -38,6 +45,8 @@
         alt="paypal"
        >
       </v-avatar>
+      </b-form-radio-group>
+    </b-form-group>
   <br>
 
        </v-layout>
@@ -63,6 +72,7 @@
             solo
           ></v-text-field>
         </v-flex>
+
 
         <v-flex xs12 sm6 md3>
           END DATE
@@ -99,13 +109,24 @@
   </v-form>
 </v-card>
 </v-container>
+
 </template>
 
 <script>
 export default {
-  data: () => ({
+  data () {
+    return {
     m: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
-    y: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027']
-  })
+    y: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027'],
+     selected: 'first',
+      options: [
+        { text: 'Toggle this custom radio', value: 'Visa' },
+        { text: 'Or toggle this other custom radio', value: 'MasterCard' },
+        { text: 'This one is Disabled', value: 'PayPal'}
+        
+      ]
+ }
+}
 }
 </script>
+

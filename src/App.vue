@@ -9,13 +9,14 @@
     <br>
     <br>
 
-    
-     <show-product-all/>
+    <!-- <comfirmation/> -->
+    <!-- <payment/> -->
+     <!-- <show-product-all/> -->
     <br>
     <br>
 <br>
     <!-- <ShowProductAll/> -->
-    <Cart/>
+    <!-- <Cart/> -->
     <br>
     <br>
     </v-content>
@@ -31,6 +32,8 @@ import CarouselBanner from './components/CarouselBanner'
 import ShowProductAll from './components/ShowProductAll'
 import ShowCart from './components/ShowCart'
 import Cart from './components/Checkout/Cart'
+import Comfirmation from './components/Checkout/Comfirmation'
+import Payment from './components/Checkout/Payment'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -43,7 +46,9 @@ export default {
     ShowProductAll,
     ShowCart,
     HeaderUser,
-    Cart
+    Cart,
+    Comfirmation,
+    Payment
   },
   computed: {
     ...mapGetters(['getIsShowMainHeader'])
