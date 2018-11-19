@@ -15,6 +15,11 @@ export default new Router({
       component: HomePage
     },
     {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/Login.vue')
+    },
+    {
       path: '/product/:productId',
       name: 'product-detail',
       component: () => import('./views/ProductDetail.vue')

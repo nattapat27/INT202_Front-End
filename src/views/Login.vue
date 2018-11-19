@@ -1,0 +1,43 @@
+<template>
+  <v-app>
+    <v-content>
+    
+      <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn>
+    </v-content>
+  </v-app>
+
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
+  name: 'Login',
+  components: {
+   
+  },
+  computed: {
+    ...mapGetters(['getIsShowMainHeader'])
+  },
+  data(){
+    return {
+      userDetail: {}
+    }
+  },
+  methods: {
+    loginFacebook: function(){
+      FB.login((response) => {
+          if (response.authResponse) {
+          console.log('Welcome!  Fetching your information.... ');
+          FB.api('/me', (response) => {
+            console.log('Good to see you, ' + response.name + '.');
+          });
+          } else {
+          console.log('User cancelled login or did not fully authorize.');
+          }
+      })
+    }
+  }
+}
+</script>
