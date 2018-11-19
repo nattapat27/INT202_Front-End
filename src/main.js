@@ -6,6 +6,7 @@ import store from './store'
 import Vuetify from 'vuetify'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'vuetify/dist/vuetify.min.css' 
 import BootstrapVue from 'bootstrap-vue'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 Vue.config.productionTip = false

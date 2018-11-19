@@ -102,7 +102,7 @@
       </v-layout>
     </v-container>
   </v-form>
-</-card>
+
 </v-container>
 
 </template>

@@ -4,20 +4,17 @@
       <HeaderUser/>
     
     <mainheader v-show="getIsShowMainHeader"/>
-
+    
     <!-- <delivery/> -->
     <router-view> </router-view>
     <br>
     <br>
 
-    <!-- <comfirmation/> -->
-    <!-- <payment/> -->
-  
     <br>
     <br>
-<br>
-    
-    <!-- <Cart/> -->
+    <br>
+
+    <!-- <show-product-all/> -->
     <br>
     <br>
     </v-content>
@@ -33,8 +30,9 @@ import CarouselBanner from './components/CarouselBanner'
 import ShowProductAll from './components/ShowProductAll'
 import ShowCart from './components/ShowCart'
 import Cart from './components/Checkout/Cart'
-import Comfirmation from './components/Checkout/Comfirmation'
 import Payment from './components/Checkout/Payment'
+import ProductDetailTable from './components/Checkout/ProductDetailTable'
+import OrderSummary from './components/Checkout/OrderSummary'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -48,8 +46,10 @@ export default {
     ShowCart,
     HeaderUser,
     Cart,
-    Comfirmation,
-    Payment
+
+    Payment,
+    ProductDetailTable,
+    OrderSummary
   },
   computed: {
     ...mapGetters(['getIsShowMainHeader'])
