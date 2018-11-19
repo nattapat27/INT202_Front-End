@@ -1,9 +1,21 @@
 <template>
   <v-app>
     <v-content>
+     
     
-      <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn>
+      <!-- <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn> -->
     </v-content>
+
+      <div class="LoginLeft">
+        <center><img class="Logo" src="../assets/Logo1.png" alt="Logo"></center>
+           <!-- <v-img  :src ="item.src" >
+
+           </v-img> -->
+      </div>
+
+      <div class="LoginRight" >
+      </div>
+  
   </v-app>
 
 </template>
@@ -24,6 +36,12 @@ export default {
   data(){
     return {
       userDetail: {}
+      // item:[
+      //   {
+      //     src: '../assets/Logo1.png'
+      //   }
+      // ]
+      
     }
   },
   methods: {
@@ -46,3 +64,27 @@ export default {
   }
 }
 </script>
+
+<style>
+.LoginLeft{
+  background-color: #5670BA;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  
+}
+
+.LoginRight{
+  background-color: #8BC8BC;
+  width: 100%;
+  height: 100%;
+
+}
+
+.Logo{
+  margin-top: 15%;
+ 
+}
+</style>
+
+
