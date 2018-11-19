@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-content>
-      <HeaderUser/>
+      <HeaderUser v-show="getIsShowUserHeader"/>
       <mainheader v-show="getIsShowMainHeader"/> 
       <router-view></router-view>
     </v-content>
@@ -36,7 +36,7 @@ export default {
     Payment
   },
   computed: {
-    ...mapGetters(['getIsShowMainHeader'])
+    ...mapGetters(['getIsShowMainHeader', 'getIsShowUserHeader'])
   },
   data(){
     return {
