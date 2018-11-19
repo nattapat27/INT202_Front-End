@@ -1,13 +1,9 @@
 <template>
-
-
     <div>
         <!-- <center><h1 class="header">Added To Cart</h1></center> -->
-
         <div class="imageProduct">
             <v-carousel style="width: 250px" height="250px" margin-top="50px">
               <v-carousel-item
-
                  v-for="(item,i) in items"
                    :key="i"
                    :src="item.src"

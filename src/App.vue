@@ -1,25 +1,9 @@
 <template>
   <v-app>
     <v-content>
-      <HeaderUser/>
-    
-    <mainheader v-show="getIsShowMainHeader"/>
-
-    <!-- <delivery/> -->
-    <router-view> </router-view>
-    <br>
-    <br>
-
-    <!-- <comfirmation/> -->
-    <!-- <payment/> -->
-  
-    <br>
-    <br>
-<br>
-    
-    <!-- <Cart/> -->
-    <br>
-    <br>
+      <!-- <HeaderUser/>
+      <mainheader v-show="getIsShowMainHeader"/> -->
+      <router-view></router-view>
     </v-content>
   </v-app>
 
@@ -31,7 +15,7 @@ import Mainheader from './components/Mainheader'
 import HeaderUser from './components/HeaderUser'
 import CarouselBanner from './components/CarouselBanner'
 import ShowProductAll from './components/ShowProductAll'
-import ShowCart from './components/ShowCart'
+import ProductDetail from './views/ProductDetail'
 import Cart from './components/Checkout/Cart'
 import Comfirmation from './components/Checkout/Comfirmation'
 import Payment from './components/Checkout/Payment'
@@ -45,7 +29,7 @@ export default {
     Mainheader,
     CarouselBanner,
     ShowProductAll,
-    ShowCart,
+    ProductDetail,
     HeaderUser,
     Cart,
     Comfirmation,

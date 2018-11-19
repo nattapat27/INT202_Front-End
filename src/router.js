@@ -10,10 +10,20 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/',
+      name: 'HomePage',
+      component: HomePage
+    },
+    {
+      path: '/product/:productId',
+      name: 'product-detail',
+      component: () => import('./views/ProductDetail.vue')
+    },
+    {
       path: '/checkoutproduct',
       name: 'checkout-product',
       component: CheckoutProduct
-    },
+    }
     // },
     // {
     //   path: '/shippingstatus',
@@ -21,10 +31,6 @@ export default new Router({
     //   component: ShippingStatus
     // }
     // },
-    {
-      path: '/',
-      name: 'HomePage',
-      component: HomePage
-    }
+
   ]
 })
