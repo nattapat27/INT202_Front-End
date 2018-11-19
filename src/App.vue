@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <HeaderUser v-show="getIsShowUserHeader"/>
-      <mainheader v-show="getIsShowMainHeader"/> 
+      <mainheader v-show="getIsShowMainHeader"/>
       <router-view></router-view>
     </v-content>
   </v-app>
@@ -38,13 +38,13 @@ export default {
   computed: {
     ...mapGetters(['getIsShowMainHeader', 'getIsShowUserHeader'])
   },
-  data(){
+  data () {
     return {
       userDetail: {}
     }
   },
   methods: {
-    
+
   }
 }
 </script>

@@ -20,7 +20,6 @@
       </v-spacer>
 
       <v-spacer>
-     
 
         <v-text-field
         append-icon="mic"

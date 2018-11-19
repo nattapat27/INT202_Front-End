@@ -1,8 +1,6 @@
 <template>
   <v-app>
     <v-content>
-     
-    
       <!-- <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn> -->
     </v-content>
 
@@ -15,7 +13,7 @@
 
       <div class="LoginRight" >
       </div>
-  
+
   </v-app>
 
 </template>
@@ -28,12 +26,12 @@ export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
   name: 'Login',
   components: {
-   
+
   },
   computed: {
     ...mapGetters(['getUserDetail', 'getJwtToken'])
   },
-  data(){
+  data () {
     return {
       userDetail: {}
       // item:[
@@ -41,24 +39,32 @@ export default {
       //     src: '../assets/Logo1.png'
       //   }
       // ]
-      
+
     }
   },
+  mounted () {
+    this.setIsShowUserHeader(false)
+    this.setIsShowMainHeader(false)
+  },
+  beforeRouteLeave (to, from, next) {
+    this.setIsShowUserHeader(true)
+    this.setIsShowMainHeader(true)
+  },
   methods: {
-      ...mapActions(['setUserDetail', 'setJwtToken']),
-    loginFacebook: function(){
+    ...mapActions(['setUserDetail', 'setJwtToken', 'setIsShowUserHeader', 'setIsShowMainHeader']),
+    loginFacebook: function () {
       FB.login((response) => {
-          if (response.authResponse) {
-          console.log('Welcome!  Fetching your information.... ');
+        if (response.authResponse) {
+          console.log('Welcome!  Fetching your information.... ')
           FB.api('/me?fields=id,name,email', (response) => {
-            console.log('Good to see you, ' + response.name + '.');
+            console.log('Good to see you, ' + response.name + '.')
             console.log(response)
             this.userDetail = response
             this.setUserDetail(response)
-          });
-          } else {
-          console.log('User cancelled login or did not fully authorize.');
-          }
+          })
+        } else {
+          console.log('User cancelled login or did not fully authorize.')
+        }
       })
     }
   }
@@ -71,7 +77,7 @@ export default {
   width: 50%;
   height: 100%;
   position: absolute;
-  
+
 }
 
 .LoginRight{
@@ -83,8 +89,6 @@ export default {
 
 .Logo{
   margin-top: 15%;
- 
+
 }
 </style>
-
-
