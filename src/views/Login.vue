@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+import axios from 'axios'
 
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
@@ -18,7 +19,7 @@ export default {
    
   },
   computed: {
-    ...mapGetters(['getIsShowMainHeader'])
+    ...mapGetters(['getUserDetail', 'getJwtToken'])
   },
   data(){
     return {
@@ -26,12 +27,16 @@ export default {
     }
   },
   methods: {
+      ...mapActions(['setUserDetail', 'setJwtToken']),
     loginFacebook: function(){
       FB.login((response) => {
           if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ');
-          FB.api('/me', (response) => {
+          FB.api('/me?fields=id,name,email', (response) => {
             console.log('Good to see you, ' + response.name + '.');
+            console.log(response)
+            this.userDetail = response
+            this.setUserDetail(response)
           });
           } else {
           console.log('User cancelled login or did not fully authorize.');
