@@ -1,11 +1,6 @@
 <template>
 
 <v-container grid-list-md text-xs-left>
-
-
-    
- 
-
   <br>
   <br>
   <br>
@@ -107,7 +102,7 @@
       </v-layout>
     </v-container>
   </v-form>
-</v-card>
+</-card>
 </v-container>
 
 </template>
@@ -120,10 +115,9 @@ export default {
     y: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027'],
      selected: 'first',
       options: [
-        { text: 'Toggle this custom radio', value: 'Visa' },
-        { text: 'Or toggle this other custom radio', value: 'MasterCard' },
-        { text: 'This one is Disabled', value: 'PayPal'}
-        
+        { value: 'Visa' },
+        {value: 'MasterCard' },
+        {value: 'PayPal'}
       ]
  }
 }

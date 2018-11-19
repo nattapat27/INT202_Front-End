@@ -4,6 +4,7 @@
       <HeaderUser/>
     
     <mainheader v-show="getIsShowMainHeader"/>
+
     <!-- <delivery/> -->
     <router-view> </router-view>
     <br>
@@ -11,11 +12,11 @@
 
     <!-- <comfirmation/> -->
     <!-- <payment/> -->
-     <!-- <show-product-all/> -->
+  
     <br>
     <br>
 <br>
-    <!-- <ShowProductAll/> -->
+    
     <!-- <Cart/> -->
     <br>
     <br>
