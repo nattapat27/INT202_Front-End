@@ -43,12 +43,10 @@ export default {
     }
   },
   mounted () {
-    this.setIsShowUserHeader(false)
-    this.setIsShowMainHeader(false)
+    this.hideAnyHeaderWhenOnLoginPage()
   },
   beforeRouteLeave (to, from, next) {
-    this.setIsShowUserHeader(true)
-    this.setIsShowMainHeader(true)
+    this.showHeaderAfterExitLoginPage()
   },
   methods: {
     ...mapActions(['setUserDetail', 'setJwtToken', 'setIsShowUserHeader', 'setIsShowMainHeader']),
@@ -66,6 +64,14 @@ export default {
           console.log('User cancelled login or did not fully authorize.')
         }
       })
+    },
+    hideAnyHeaderWhenOnLoginPage: function(){
+      this.setIsShowUserHeader(false)
+      this.setIsShowMainHeader(false)
+    },
+    showHeaderAfterExitLoginPage: function(){
+      this.setIsShowUserHeader(true)
+      this.setIsShowMainHeader(true)
     }
   }
 }
