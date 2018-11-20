@@ -7,7 +7,8 @@
          <v-avatar  size="80">
           <router-link to="/">
             <v-btn fab  flat big @click="setIsShowMainHeader(true)" >
-               <img src="@/assets/Logo1.png"  alt="LOGO" aria-setsize="1px">
+               <img  v-if="getUserDetail == null" src="@/assets/Logo1.png"  alt="LOGO" aria-setsize="1px">
+               <p v-else>{{getUserDetail.name}}</p>
             </v-btn>
           </router-link>
         </v-avatar>
@@ -24,10 +25,13 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   methods: {
     ...mapActions(['setIsShowMainHeader'])
+  },
+  computed: {
+    ...mapGetters(['getUserDetail'])
   },
   mounted () {
     this.setIsShowMainHeader(false)

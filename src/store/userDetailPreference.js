@@ -1,10 +1,11 @@
 export const userDetailPreference = {
   state: {
-    userDetail: {},
+    userDetail: null,
     jwtToken: ''
   },
   actions: {
     setUserDetail: function ({ commit }, userDetail) {
+      console.log(userDetail)
       commit('setUserDetail', userDetail)
     },
     setJwtToken: function ({ commit }, jwtToken) {
@@ -13,10 +14,10 @@ export const userDetailPreference = {
   },
   mutations: {
     setUserDetail: function (state, userDetail) {
-      state.UserDetail = userDetail
+      state.userDetail = userDetail
     },
-    setJwtToken: function ({ commit }, jwtToken) {
-      commit('setJwtToken', jwtToken)
+    setJwtToken: function (state, jwtToken) {
+      state.jwtToken = jwtToken
     }
   },
   getters: {

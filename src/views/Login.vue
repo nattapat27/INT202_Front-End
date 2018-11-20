@@ -12,40 +12,32 @@
       <div class="LoginRight">
           <div class="str" >
              <h1 style="margin-bottom:50px; margin-top:-10%;">LOGIN</h1>
-            <v-form v-model="valid" >
+            <v-form>
             <v-text-field
-              v-model="name"
-              :rules="nameRules"
+              v-model="username"
               label="Username"
               required
             ></v-text-field>
             <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              :counter="10"
-              
+              v-model="password"
               label="Password"
               required
             ></v-text-field>
   <br>
     <b-form-checkbox value="Remember">Remember Me</b-form-checkbox>
     <button type="button" style="margin-top:-10%;" class="btn btn-link-primary" id="ForgetPassword">Forget Password?</button>
-          
   </v-form>
   <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-left:10px" >Login</button>
   
   <button type="button" class="btn btn-link-warning " style="margin-left:1px" >Not Resgister?   SIGN UP</button>
   
-<br>
+  <br>
    <hr style="margin-top:130px">
           </div>
-          
           <div class="btn">
-
           <v-btn class="ClickToFacebook" color="rgb(51,102,204)" @click="loginFacebook()" style="color:white; margin-left:-50%">เข้าสู่ระบบด้วย Facebook</v-btn>
           </div>
       </div>
-
   </v-app>
 
 </template>
@@ -66,19 +58,16 @@ export default {
   data () {
     return {
       checkbox: true,
-      item:[
-        {
-          src: '../assets/Logo1.png'
-        }
-      ]
+      username: '',
+      password: ''
     }
   },
   mounted () {
     this.hideAnyHeaderWhenOnLoginPage()
-   
   },
   beforeRouteLeave (to, from, next) {
     this.showHeaderAfterExitLoginPage()
+    next()
   },
   methods: {
     ...mapActions(['setUserDetail', 'setJwtToken', 'setIsShowUserHeader', 'setIsShowMainHeader']),
@@ -87,11 +76,11 @@ export default {
         if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ')
           FB.api('/me?fields=id,name,email', (response) => {
-            console.log('Good to see you, ' + response.name + '.')
             console.log(response)
             this.userDetail = response
             this.setUserDetail(response)
-            // axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
+            axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
+            this.$router.push('/')
           })
         } else {
           console.log('User cancelled login or did not fully authorize.')
@@ -105,7 +94,7 @@ export default {
     },
     checkLoginState: function () {
       FB.getLoginStatus((response) => {
-        console.log('dfsdf')
+        console.log('status')
         console.log(response)
       });
     },
