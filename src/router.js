@@ -20,11 +20,6 @@ export default new Router({
       component: () => import('./views/Login.vue')
     },
     {
-      path: '/products',
-      name: 'products',
-      component: () => import('./components/ShowProductAll.vue')
-    },
-    {
       path: '/product/:productId',
       name: 'product-detail',
       component: () => import('./views/ProductDetail.vue')

@@ -1,8 +1,8 @@
 <template>
     <v-hover>
     <v-card
-      slot-scope="{ hover }"  class="mx-auto"  color="grey lighten-4"  max-width="600">
-      <v-img  :src ="product.image" >
+      slot-scope="{ hover }"  class="mx-auto"  color="grey lighten-4"  width="344">
+      <v-img  :src ="product.image"  aspect="1.7" >
         <v-expand-transition >
           <div
             v-if="hover"
@@ -32,7 +32,7 @@ export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
   name: 'ProductCard',
   props: {
-      product: {}
+    product: {}
   },
   data () {
     return {

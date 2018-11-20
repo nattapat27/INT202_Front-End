@@ -1,14 +1,14 @@
 <template>
     <div class="clearfix">
       <router-link  :to="`/product/${product.productId}`" v-for="product in products" :key="product.productId">
-      <product-card  class="point" :product="product"  />
+        <!-- <product-card  class="point" :product="product"  /> -->
       </router-link>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-import ProductCard from './ProductCard'
+// import ProductCard from './product/ProductCard'
 export default {
   data () {
     return {
@@ -66,20 +66,20 @@ export default {
     }
   },
   components: {
-    ProductCard
+    // ProductCard
   },
-  mounted(){
+  mounted () {
     this.loadAllProduct()
   },
   methods: {
-    loadAllProduct: async function(){
+    loadAllProduct: async function () {
       let products = await axios.get(process.env.VUE_APP_BACKEND_SERVICE + '/products')
-      //this.items = items
+      // this.items = items
       products = products.data
       this.products = products
       console.log(products)
     }
-  },
+  }
 }
 </script>
 

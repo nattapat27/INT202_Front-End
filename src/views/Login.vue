@@ -66,11 +66,11 @@ export default {
         }
       })
     },
-    hideAnyHeaderWhenOnLoginPage: function(){
+    hideAnyHeaderWhenOnLoginPage: function () {
       this.setIsShowUserHeader(false)
       this.setIsShowMainHeader(false)
     },
-    showHeaderAfterExitLoginPage: function(){
+    showHeaderAfterExitLoginPage: function () {
       this.setIsShowUserHeader(true)
       this.setIsShowMainHeader(true)
     }

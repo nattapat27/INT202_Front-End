@@ -3,18 +3,12 @@
         <!-- <center><h1 class="header">Added To Cart</h1></center> -->
         <div class="imageProduct">
             <v-carousel style="width: 250px" height="250px" margin-top="50px">
-              <v-carousel-item
-                 v-for="(item,i) in items"
-                   :key="i"
-                   :src="item.src"
-                 >
-               </v-carousel-item>
-              </v-carousel>
+              <v-carousel-item :src="product.image"></v-carousel-item>
+            </v-carousel>
         </div>
 
-        <div><p class="titleProduct">Ralph Breaks the Internet
-            <br> Mini ''Tsum Tsum'' Collection</p><br>
-            <p class="subtitle">$5.95
+        <div><p class="titleProduct">{{product.productName}}</p><br>
+            <p class="subtitle">{{product.price}}
              <br> Quanlity :
                 <b-dropdown border: variant="#ffffff" id="ddown-sm-left" text="1" size="sm" class="m-2">
                           <b-dropdown-item >1</b-dropdown-item>
@@ -27,13 +21,9 @@
                           <b-dropdown-item>8</b-dropdown-item>
                           <b-dropdown-item>9</b-dropdown-item>
                           <b-dropdown-item>10</b-dropdown-item>
-
                       </b-dropdown>
-
                 </p>
-
               </div>
-
 <br>
 
           <div class="Button">
@@ -48,52 +38,33 @@
                   <div class="ProductDetail">
                         <p class="ProductDetailTitle">Product Details</p>
                         <br>
-                  <p class="subheader">Item No. 1234041281402P</p>
-                      <p class="bodyText">Retro video game bad guy Wreck-It Ralph will make a great addition to your <br>
-                      mini “Tsum Tsum”  plush collection. Inspired by Ralph Breaks the Internet, <br>
-                      this adorable plush is ready to wreck it!
-                      </p>
-                     <p class="subheader">Details</p>
-                      <p class="bodyText">- Mini “Tsum Tsum” plush <br>
-                      - Embroidered features <br>
-                      - Soft, squeezable fill with beans in belly <br>
-                      - Fuzzy plush texturing <br>
-                      - Part of our Ralph Breaks the Internet Mini “Tsum Tsum” Plush Collection</p>
-
-                       <p class="subheader">The bare necessities</p>
-                      <p class="bodyText">- Polyester/ plastic pellets
-                      - 3 1/2” L
-                      - Imported
-                      </p>
-
+                      <p class="subheader">Details</p>
+                      <p class="bodyText">{{product.description}}</p>
         </div>
-
     </div>
-
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data () {
     return {
-      items: [
-        {
-          src:
-            'https://bit.ly/2FlUDt7'
-        },
-        {
-          src:
-            'https://lumiere-a.akamaihd.net/v1/images/file_5fc12993.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8'
-        },
-        {
-          src:
-            'https://lumiere-a.akamaihd.net/v1/images/file_bbf36b2c.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8'
-        },
-        {
-          src:
-            'https://lumiere-a.akamaihd.net/v1/images/file_02006476.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8'
-        }
-      ]
+      product: {}
+    }
+  },
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
+      let productId = to.params.productId
+      vm.loadProductDetail(productId)
+    })
+  },
+  methods: {
+    loadProductDetail: async function (productId) {
+      console.log(productId)
+      let product = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/product/${productId}`)
+      product = product.data
+      this.product = product
+      console.log(this.product)
     }
   }
 }
