@@ -13,7 +13,7 @@
 import Delivery from './components/Checkout/Delivery'
 import Mainheader from './components/header/Mainheader'
 import HeaderUser from './components/header/HeaderUser'
-import Comfirmation from './components/Checkout/Comfirmation'
+import Confirmation from './components/Checkout/Confirmation'
 import Payment from './components/Checkout/Payment'
 import ProductDetailTable from './components/Checkout/ProductDetailTable'
 import OrderSummary from './components/Checkout/OrderSummary'
@@ -26,7 +26,7 @@ export default {
     Delivery,
     Mainheader,
     HeaderUser,
-    Comfirmation,
+    Confirmation,
     Payment
   },
   computed: {
