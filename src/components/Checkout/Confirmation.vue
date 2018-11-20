@@ -2,7 +2,7 @@
    
     <v-card>
       <br>
-      <h1>SHOPPING CART</h1>  
+      <h1>Confirmation</h1>  
     
        <v-spacer> </v-spacer>
        
@@ -10,9 +10,19 @@
            <v-container>   
               <v-layout row wrap justify-space-around>
                 <v-flex xs12 sm6>
+              
+              
+                <!-- ต้องเปลี่ยนจากกรอบเลือกจำนวนสินค้าให้ฟิคค่า -->
                    <product-detail-table/>
+              
+              
                 </v-flex>
-                  <OrderSummary/>
+                
+               
+                  <DetailSummary/>
+            
+              
+              
                </v-layout>
               </v-container>
             </v-form>
@@ -22,13 +32,15 @@
     
 </template>
 <script>
-  
 import ProductDetailTable from './ProductDetailTable'
 import OrderSummary from './OrderSummary'
+import DetailSummary from './DetailSummary'
 export default {
    components: {
      OrderSummary,
-     ProductDetailTable
+     ProductDetailTable,
+     DetailSummary
 }
 }
 </script>
+

@@ -84,12 +84,8 @@
       </v-stepper-content>
 
       <v-stepper-content step="4">
-        <v-card
-          class="mb-5"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
-
+          
+<confirmation/>
         <v-layout class="text-xs-right"
          justify-space-around>
           <v-spacer></v-spacer>
@@ -114,6 +110,7 @@
 import Payment from '../components/Checkout/Payment'
 import Delivery from '../components/Checkout/Delivery'
 import Cart from '../components/Checkout/Cart'
+import Confirmation from '../components/Checkout/Confirmation'
 import { mapActions } from 'vuex'
 
 export default {
@@ -125,7 +122,8 @@ export default {
   components: {
     Payment,
     Delivery,
-    Cart
+    Cart,
+    Confirmation
   },
   methods: {
     ...mapActions(['setIsShowMainHeader'])
