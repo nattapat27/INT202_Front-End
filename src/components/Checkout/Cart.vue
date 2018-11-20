@@ -1,11 +1,8 @@
 <template>
-
     <v-card>
       <br>
       <h1>SHOPPING CART</h1>  
-    
        <v-spacer> </v-spacer>
-
          <v-form>
            <v-container>   
               <v-layout row wrap justify-space-around>
@@ -15,10 +12,8 @@
                   <OrderSummary/>
                </v-layout>
               </v-container>
-            </v-form>
-
+           </v-form>
     </v-card>
-
 </template>
 <script>
   
