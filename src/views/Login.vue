@@ -84,8 +84,7 @@ export default {
         if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ')
           FB.api('/me?fields=id,name,email', async (response) => {
-            this.userDetail = response
-            this.setUserDetail(response)
+            //this.userDetail = response
             let jsonLoginBody = {
               fbId: response.id,
               username: response.name,
@@ -93,6 +92,7 @@ export default {
             }
             let userDetail = await axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login', jsonLoginBody)
             console.log(userDetail)
+            this.setUserDetail(userDetail.data)
             this.$router.push('/')
           })
         } else {

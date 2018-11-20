@@ -20,7 +20,7 @@
             <router-link to="/checkoutproduct">
               <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>
             </router-link>
-            <v-btn @click="addProductToCart(4)" class="buttonAddToShoppingCart" 
+            <v-btn @click="addProductToCart(order)" class="buttonAddToShoppingCart" 
                                     color="#5670BA" large>
               Add to Shopping Cart
             </v-btn>
@@ -43,7 +43,11 @@ export default {
   data () {
     return {
       product: {},
-      selectedQty: 1
+      selectedQty: 1,
+      order: {
+        productId: 0,
+        userId: 0
+      }
     }
   },
   beforeRouteEnter (to, from, next) {
@@ -62,8 +66,13 @@ export default {
       console.log(this.product)
     }
   },
+  mounted(){
+    this.order.userId = this.getUserDetail.userId
+    this.order.productId = this.$route.params.productId
+    console.log(this.order)
+  },
   computed: {
-    ...mapGetters(['getCart'])
+    ...mapGetters(['getCart', 'getUserDetail'])
   }
 }
 </script>
