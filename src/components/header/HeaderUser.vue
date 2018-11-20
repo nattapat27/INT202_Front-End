@@ -16,7 +16,7 @@
         <v-spacer></v-spacer>
        <p v-if="getUserDetail != null">
          <br>
-         {{getUserDetail.name}}</p>
+         {{getUserDetail.username}}</p>
       <v-btn fab dark small color="indigo">
           <v-icon dark>account_circle</v-icon>
       </v-btn>

@@ -21,12 +21,11 @@
           <v-avatar size="30">
                 <img  src="@/assets/Visa-logo1.jpg"  alt="visa">
           </v-avatar>
+
           <v-spacer> </v-spacer>
           <v-spacer> </v-spacer>
           <!-- จำนวน -->
           <v-layout justify-center>
-                  
-        
           <input type="number" name="quantity"
    min="0" max="100" value="30" >
        
@@ -38,8 +37,6 @@
           <!-- ราคารวม -->
           100
         </v-layout>
-
-
 </v-container>        
 </template>
 <script>
