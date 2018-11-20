@@ -43,7 +43,7 @@
   </v-app>
   <v-app v-else>
     <h1>Already Login : ระบบกำลังพัฒนาด้วยระบบ Fast Development โปรดอดใจรอ</h1>
-    <h1>{{getUserDetail.name}}</h1>
+    <h1>{{getUserDetail.username}}</h1>
     <router-link to="/"><v-btn color="success">กลับไปหน้าหลัก</v-btn></router-link>
   </v-app>
   </div>

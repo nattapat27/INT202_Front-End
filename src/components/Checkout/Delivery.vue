@@ -96,9 +96,15 @@
 </template>
 <script>
 export default {
-  data: () => ({
-    items: ['THAILAND', 'JAPAN', 'KOREA', 'CHINA'],
-    text: ''
-  })
+  data () {
+    return{
+      items: ['THAILAND', 'JAPAN', 'KOREA', 'CHINA'],
+      text: '',
+      country: '',
+      city: '',
+      addressDetail: '',
+      zipcode: ''
+    }
+  }
 }
 </script>

@@ -85,7 +85,7 @@
 
       <v-stepper-content step="4">
           
-<confirmation/>
+      <confirmation/>
         <v-layout class="text-xs-right"
          justify-space-around>
           <v-spacer></v-spacer>

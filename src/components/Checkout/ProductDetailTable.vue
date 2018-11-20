@@ -17,34 +17,43 @@
          <br>
 
   <!-- product List + Product detail ซัมติงเอามาใส่วนลูป -->
-        <v-layout justify-space-around>
+        <v-layout justify-space-around v-for="order in order.order.orderDetail" :key="order.productId">
           <v-avatar size="30">
-                <img  src="@/assets/Visa-logo1.jpg"  alt="visa">
+                <img  :src="order.product.image"  alt="order.product.productName">
           </v-avatar>
-
+          {{order.product.productName}}
           <v-spacer> </v-spacer>
           <v-spacer> </v-spacer>
           <!-- จำนวน -->
           <v-layout justify-center>
           <input type="number" name="quantity"
-   min="0" max="100" value="30" >
+            min="0" max="100" :value="order.quantity" >
        
           </v-layout>
           <v-spacer> </v-spacer>
           <!-- เงิน -->
-          50
+          {{order.product.price}}
           <v-spacer> </v-spacer>
           <!-- ราคารวม -->
-          100
+          {{order.totalPrice}}
         </v-layout>
 </v-container>        
 </template>
 <script>
 
 export default {
-   components: {
+      components: {
     
-}
+      },
+      props: {
+            order: {}
+      },
+      mounted(){
+            console.log('product table')
+      },
+      methods: {
+
+      }
 }
   
   

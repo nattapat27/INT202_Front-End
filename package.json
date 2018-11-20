@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint",
-    "มั่นคงมั่งคั่งยั่งยืน": "yarn build && ibmcloud cf push"
+    "มั่นคงมั่งคั่งยั่งยืน": "yarn build && ibmcloud cf push",
+    "ชิตังเมโป้ง": "มั่นคงมั่งคั่งยั่งยืน"
   },
   "dependencies": {
     "axios": "^0.18.0",

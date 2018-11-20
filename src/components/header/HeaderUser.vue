@@ -17,10 +17,11 @@
        <p v-if="getUserDetail != null">
          <br>
          {{getUserDetail.username}}</p>
-      <v-btn fab dark small color="indigo">
-          <v-icon dark>account_circle</v-icon>
-      </v-btn>
-
+        <router-link to="/login">
+        <v-btn fab dark small color="indigo">
+            <v-icon dark>account_circle</v-icon>
+        </v-btn>
+       </router-link>
       </v-card-title>
     </v-card>
     </v-layout>
