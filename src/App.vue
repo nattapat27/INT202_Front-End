@@ -16,7 +16,6 @@ import HeaderUser from './components/header/HeaderUser'
 import CarouselBanner from './components/CarouselBanner'
 import ShowProductAll from './components/ShowProductAll'
 import ProductDetail from './views/ProductDetail'
-import Comfirmation from './components/Checkout/Comfirmation'
 import Payment from './components/Checkout/Payment'
 import ProductDetailTable from './components/Checkout/ProductDetailTable'
 import OrderSummary from './components/Checkout/OrderSummary'
@@ -32,7 +31,6 @@ export default {
     CarouselBanner,
     ShowProductAll,
     ProductDetail,
-    Comfirmation,
     Payment
   },
   computed: {
