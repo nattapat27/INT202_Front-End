@@ -1,39 +1,32 @@
 <template>
   <v-app>
-    <v-content>
+    <!-- <v-content>
       <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn>
       <v-btn color="rgb(51,102,204)" @click="checkLoginState()" style="color:white">status</v-btn>
       <v-btn color="rgb(51,102,204)" @click="logoutFacebook()" style="color:white">logout facebook</v-btn>
-    </v-content>
-
-      <!-- <div class="LoginLeft">
+    </v-content> -->
+      <div class="LoginLeft">
         <center><img class="Logo" src="../assets/Logo1.png" alt="Logo"></center>
-           <v-img  :src ="item.src" >
-
-           </v-img> 
       </div>
 
-      <div class="LoginRight" 
-      >
+      <div class="LoginRight">
           <div class="str" >
              <h1 style="margin-bottom:50px; margin-top:-10%;">LOGIN</h1>
-             
             <v-form v-model="valid" >
-    <v-text-field
-      v-model="name"
-      :rules="nameRules"
-      label="Username"
-      required
-    ></v-text-field>
-    <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      :counter="10"
-      
-      label="Password"
-      required
-    ></v-text-field>
-    
+            <v-text-field
+              v-model="name"
+              :rules="nameRules"
+              label="Username"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="email"
+              :rules="emailRules"
+              :counter="10"
+              
+              label="Password"
+              required
+            ></v-text-field>
   <br>
     <b-form-checkbox value="Remember">Remember Me</b-form-checkbox>
     <button type="button" style="margin-top:-10%;" class="btn btn-link-primary" id="ForgetPassword">Forget Password?</button>
@@ -64,26 +57,20 @@ import axios from "axios";
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
   name: "Login",
-  components: {},
-  name: 'Login',
   components: {
 
   },
   computed: {
     ...mapGetters(["getUserDetail", "getJwtToken"])
   },
-  data() {
   data () {
     return {
       checkbox: true,
-      
-      // item:[
-      //   {
-      //     src: '../assets/Logo1.png'
-      //   }
-      // ]
-    };
-
+      item:[
+        {
+          src: '../assets/Logo1.png'
+        }
+      ]
     }
   },
   mounted () {
@@ -94,21 +81,6 @@ export default {
     this.showHeaderAfterExitLoginPage()
   },
   methods: {
-    ...mapActions(["setUserDetail", "setJwtToken"]),
-    loginFacebook: function() {
-      FB.login(response => {
-        if (response.authResponse) {
-          console.log("Welcome!  Fetching your information.... ");
-          FB.api("/me?fields=id,name,email", response => {
-            console.log("Good to see you, " + response.name + ".");
-            console.log(response);
-            this.userDetail = response;
-            this.setUserDetail(response);
-          });
-        } else {
-          console.log("User cancelled login or did not fully authorize.");
-        }
-      });
     ...mapActions(['setUserDetail', 'setJwtToken', 'setIsShowUserHeader', 'setIsShowMainHeader']),
     loginFacebook: function () {
       FB.login((response) => {
