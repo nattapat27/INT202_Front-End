@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     loadAllProduct: async function(){
-      let products = await axios.get(process.env.VUE_APP_BACKEND_SERVICE + '/product')
+      let products = await axios.get(process.env.VUE_APP_BACKEND_SERVICE + '/products')
       //this.items = items
       products = products.data
       this.products = products

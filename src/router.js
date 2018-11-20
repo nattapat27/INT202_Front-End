@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import CheckoutProduct from './views/CheckoutProduct.vue'
 // import ShippingStatus from './views/ShippingStatus.vue'
-import HomePage from './views/Homepage.vue'
+import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HomePage',
-      component: HomePage
+      name: 'Home',
+      component: Home
     },
     {
       path: '/login',
