@@ -14,6 +14,7 @@ export const userDetailPreference = {
   },
   mutations: {
     setUserDetail: function (state, userDetail) {
+      console.log(userDetail)
       state.userDetail = userDetail
     },
     setJwtToken: function (state, jwtToken) {
