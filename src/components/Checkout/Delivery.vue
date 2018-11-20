@@ -36,6 +36,7 @@
             label="number"
             single-line
             solo
+            width="2pt"
           ></v-text-field>
         </v-flex>
 
@@ -89,6 +90,7 @@
       </v-layout>
     </v-container>
   </v-form>
+
 </v-card>
 </v-container>
 </template>

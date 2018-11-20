@@ -1,25 +1,37 @@
 <template>
         <v-card color="light-blue lighten-4" width="344">
-           <br>
-            <h2>  ORDER SUMMARY</h2>
-            <v-divider> </v-divider>
-            DELIVERY
-                <v-divider> </v-divider>
+           
+            <br>
+           <h2>2) DELIVERY</h2>
+               
             <br>
             <br>
             <br>
-    <!-- ตัวแปรซัมติง product list -->
+          <!-- ตัวแปรซัมติง delivery
+          จ่ายด้วย Kerry 55 บาท
+          ที่อยู่ผู้จัดส่ง
+          -->
             <br>
             <br>
-            <br>
-            <br>
-            PAYMENT
+             <v-divider> </v-divider> 
+            <h2> 3) PAYMENT METHOD </h2>
             <v-flex xs12 sm6 d-flex>
-        <b-form-select v-model="selected" :options="options" class="mb-3" size="sm" width="2pt"/>
+       
             </v-flex>
-            <v-divider> </v-divider>
-            TOTAL COST
-            <!-- ตัวแปรซัมติงรวมราคา-->
+            
+            <!-- จ่ายด้วย ... -->
+            <br>
+            <br>
+            <br>
+            <v-layout justify-center>
+            TOTAL COST        
+            
+            <v-spacer> </v-spacer>
+            155  THB <!-- ตัวแปรราคารวม-->
+            <v-spacer> </v-spacer>
+            
+           
+            </v-layout>
             <br>
             <br>
             <br>
@@ -27,14 +39,5 @@
 </template>
 
 <script>
-  export default {
-  data () {
-    return {
-      selected: null,
-      options: [
-        { value: null, text: 'Kerry -55 THB' }
-      ]
-    }
-  }
-}
+
 </script>
