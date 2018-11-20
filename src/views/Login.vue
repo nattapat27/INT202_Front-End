@@ -1,10 +1,12 @@
 <template>
-  <v-app>
+  <div>
+  <v-app v-if="getUserDetail == null">
     <!-- <v-content>
       <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn>
       <v-btn color="rgb(51,102,204)" @click="checkLoginState()" style="color:white">status</v-btn>
       <v-btn color="rgb(51,102,204)" @click="logoutFacebook()" style="color:white">logout facebook</v-btn>
     </v-content> -->
+
       <div class="LoginLeft">
         <center><img class="Logo" src="../assets/Logo1.png" alt="Logo"></center>
       </div>
@@ -39,6 +41,12 @@
           </div>
       </div>
   </v-app>
+  <v-app v-else>
+    <h1>Already Login : ระบบกำลังพัฒนาด้วยระบบ Fast Development โปรดอดใจรอ</h1>
+    <h1>{{getUserDetail.name}}</h1>
+    <router-link to="/"><v-btn color="success">กลับไปหน้าหลัก</v-btn></router-link>
+  </v-app>
+  </div>
 
 </template>
 
@@ -75,11 +83,16 @@ export default {
       FB.login((response) => {
         if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ')
-          FB.api('/me?fields=id,name,email', (response) => {
-            console.log(response)
-            this.userDetail = response
-            this.setUserDetail(response)
-            axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
+          FB.api('/me?fields=id,name,email', async (response) => {
+            //this.userDetail = response
+            let jsonLoginBody = {
+              fbId: response.id,
+              username: response.name,
+              email: response.email
+            }
+            let userDetail = await axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login', jsonLoginBody)
+            console.log(userDetail)
+            this.setUserDetail(userDetail.data)
             this.$router.push('/')
           })
         } else {

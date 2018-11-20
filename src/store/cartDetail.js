@@ -4,9 +4,10 @@ export const cartDetail = {
     cart: {}
   },
   actions: {
-    addProductToCart: async function ({ commit }, productId) {
-      let userId = 1
-      let cart = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/cart/${userId}?product_id=${productId}`)
+    addProductToCart: async function ({ commit }, order) {
+      console.log('--- กดนำของเข้าตระกร้า ----')
+      console.log(order)
+      let cart = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/cart/${order.userId}?product_id=${order.productId}`)
       console.log(cart)
       commit('setCart', cart)
     }
