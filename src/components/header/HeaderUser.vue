@@ -6,7 +6,7 @@
       <v-card-title class="teal">
          <v-avatar  size="80">
           <router-link to="/">
-            <v-btn fab  flat big @click="setIsShowMainHeader(true)" >
+            <v-btn fab  flat big @click="setIsShowMainHeader(true)"  >
                <img  v-if="getUserDetail == null" src="@/assets/Logo1.png"  alt="LOGO" aria-setsize="1px">
                <p v-else>{{getUserDetail.name}}</p>
             </v-btn>
@@ -14,11 +14,11 @@
         </v-avatar>
 
         <v-spacer></v-spacer>
-
-      <v-btn fab dark small color="indigo">
-          <v-icon dark>account_circle</v-icon>
-      </v-btn>
-
+      <router-link to="/login">
+        <v-btn fab dark small color="indigo">
+            <v-icon dark>account_circle</v-icon>
+        </v-btn>
+      </router-link>
       </v-card-title>
     </v-card>
   </v-footer>
