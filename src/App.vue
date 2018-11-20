@@ -37,6 +37,9 @@ export default {
       userDetail: {}
     }
   },
+  mounted(){
+    
+  },
   methods: {
 
   }

@@ -10,46 +10,40 @@
         <div><p class="titleProduct">{{product.productName}}</p><br>
             <p class="subtitle">{{product.price}}
              <br> Quanlity :
-                <b-dropdown border: variant="#ffffff" id="ddown-sm-left" text="1" size="sm" class="m-2">
-                          <b-dropdown-item >1</b-dropdown-item>
-                          <b-dropdown-item>2</b-dropdown-item>
-                          <b-dropdown-item >3</b-dropdown-item>
-                          <b-dropdown-item >4</b-dropdown-item>
-                          <b-dropdown-item>5</b-dropdown-item>
-                          <b-dropdown-item >6</b-dropdown-item>
-                          <b-dropdown-item>7</b-dropdown-item>
-                          <b-dropdown-item>8</b-dropdown-item>
-                          <b-dropdown-item>9</b-dropdown-item>
-                          <b-dropdown-item>10</b-dropdown-item>
-                      </b-dropdown>
-                </p>
-              </div>
-<br>
-
+                <b-dropdown border: variant="#ffffff" id="ddown-sm-left" :text="selectedQty+'' " size="sm" class="m-2">
+                  <b-dropdown-item v-for="i in 10" :key="i" @click="selectedQty = i">{{i}}</b-dropdown-item>
+                </b-dropdown>
+            </p>
+        </div>
+        <br>
           <div class="Button">
-            <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>
-            <v-btn class="buttonAddToShoppingCart" color="#5670BA" large>Add to Shopping Cart</v-btn>
+            <router-link to="/checkoutproduct">
+              <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>
+            </router-link>
+            <v-btn @click="addProductToCart(4)" class="buttonAddToShoppingCart" 
+                                    color="#5670BA" large>
+              Add to Shopping Cart
+            </v-btn>
           <br><br><br><br>
-
           </div>
           <center><div> <p class="underline">__________________________________________________________________________________________________________________________________________________</p>
           </div></center>
-
-                  <div class="ProductDetail">
-                        <p class="ProductDetailTitle">Product Details</p>
-                        <br>
-                      <p class="subheader">Details</p>
-                      <p class="bodyText">{{product.description}}</p>
-        </div>
+          <div class="ProductDetail">
+              <p class="ProductDetailTitle">Product Details</p>
+              <br>
+              <p class="bodyText">{{product.description}}</p>
+          </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
+import {mapGetters, mapActions} from 'vuex'
 export default {
   data () {
     return {
-      product: {}
+      product: {},
+      selectedQty: 1
     }
   },
   beforeRouteEnter (to, from, next) {
@@ -59,6 +53,7 @@ export default {
     })
   },
   methods: {
+    ...mapActions(['addProductToCart']),
     loadProductDetail: async function (productId) {
       console.log(productId)
       let product = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/product/${productId}`)
@@ -66,6 +61,9 @@ export default {
       this.product = product
       console.log(this.product)
     }
+  },
+  computed: {
+    ...mapGetters(['getCart'])
   }
 }
 </script>
