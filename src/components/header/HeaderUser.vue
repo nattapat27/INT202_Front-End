@@ -8,10 +8,10 @@
           <router-link to="/">
             <v-btn fab  flat big @click="setIsShowMainHeader(true)" >
                <img src="@/assets/Logo1.png"  alt="LOGO" aria-setsize="1px">
-            </v-btn>   
+            </v-btn>
           </router-link>
         </v-avatar>
-  
+
         <v-spacer></v-spacer>
 
       <v-btn fab dark small color="indigo">
@@ -25,7 +25,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-  export default {
+export default {
   methods: {
     ...mapActions(['setIsShowMainHeader'])
   },

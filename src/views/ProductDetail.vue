@@ -1,13 +1,9 @@
 <template>
-
-
     <div>
         <!-- <center><h1 class="header">Added To Cart</h1></center> -->
-
         <div class="imageProduct">
             <v-carousel style="width: 250px" height="250px" margin-top="50px">
               <v-carousel-item
-
                  v-for="(item,i) in items"
                    :key="i"
                    :src="item.src"
@@ -16,12 +12,10 @@
               </v-carousel>
         </div>
 
-        
-
         <div><p class="titleProduct">Ralph Breaks the Internet
             <br> Mini ''Tsum Tsum'' Collection</p><br>
             <p class="subtitle">$5.95
-             <br> Quanlity : 
+             <br> Quanlity :
                 <b-dropdown border: variant="#ffffff" id="ddown-sm-left" text="1" size="sm" class="m-2">
                           <b-dropdown-item >1</b-dropdown-item>
                           <b-dropdown-item>2</b-dropdown-item>
@@ -33,36 +27,23 @@
                           <b-dropdown-item>8</b-dropdown-item>
                           <b-dropdown-item>9</b-dropdown-item>
                           <b-dropdown-item>10</b-dropdown-item>
-                         
+
                       </b-dropdown>
-               
+
                 </p>
-              
-              
+
               </div>
 
-
-
-
-            
-            
-
-            
-
 <br>
-  
-            
+
           <div class="Button">
-            <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>   
+            <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>
             <v-btn class="buttonAddToShoppingCart" color="#5670BA" large>Add to Shopping Cart</v-btn>
           <br><br><br><br>
-         
-          
+
           </div>
           <center><div> <p class="underline">__________________________________________________________________________________________________________________________________________________</p>
           </div></center>
-
-
 
                   <div class="ProductDetail">
                         <p class="ProductDetailTitle">Product Details</p>
@@ -84,16 +65,15 @@
                       - 3 1/2” L
                       - Imported
                       </p>
-                  
+
         </div>
-          
+
     </div>
-              
-    
+
 </template>
 
 <script>
-  export default {
+export default {
   data () {
     return {
       items: [
@@ -119,8 +99,6 @@
 }
 </script>
 
-
-
 <style scoped>
 .imageProduct {
   margin-left: 12%;
@@ -133,8 +111,8 @@
   font-size: 16px;
   font-weight: bold;
   float: right;
-  margin-top: -15%; 
-  margin-right: 50%; 
+  margin-top: -15%;
+  margin-right: 50%;
 }
 
 .subtitle {
@@ -143,7 +121,7 @@
   float: right;
   margin-right: 57.6%;
   margin-top: -11%;
-} 
+}
 /* .buttonContinueShopping {
 
 } */
@@ -163,7 +141,6 @@
 .buttonAddToShoppingCart{
   color: #ffffff;
 
- 
 }
 
 .underline{
@@ -195,7 +172,5 @@
   border: 0.5px solid #979BA9;
   border-radius: 20%;
 }
-
-
 
 </style>

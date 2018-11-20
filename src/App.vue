@@ -1,22 +1,9 @@
 <template>
   <v-app>
     <v-content>
-      <HeaderUser/>
-    
-    <mainheader v-show="getIsShowMainHeader"/>
-    
-    <!-- <delivery/> -->
-    <router-view> </router-view>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-
-    <!-- <show-product-all/> -->
-    <br>
-    <br>
+      <HeaderUser v-show="getIsShowUserHeader"/>
+      <mainheader v-show="getIsShowMainHeader"/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 
@@ -24,12 +11,12 @@
 
 <script>
 import Delivery from './components/Checkout/Delivery'
-import Mainheader from './components/Mainheader'
-import HeaderUser from './components/HeaderUser'
+import Mainheader from './components/header/Mainheader'
+import HeaderUser from './components/header/HeaderUser'
 import CarouselBanner from './components/CarouselBanner'
 import ShowProductAll from './components/ShowProductAll'
-import ShowCart from './components/ShowCart'
-import Cart from './components/Checkout/Cart'
+import ProductDetail from './views/ProductDetail'
+import Comfirmation from './components/Checkout/Comfirmation'
 import Payment from './components/Checkout/Payment'
 import ProductDetailTable from './components/Checkout/ProductDetailTable'
 import OrderSummary from './components/Checkout/OrderSummary'
@@ -41,18 +28,23 @@ export default {
   components: {
     Delivery,
     Mainheader,
+    HeaderUser,
     CarouselBanner,
     ShowProductAll,
-    ShowCart,
-    HeaderUser,
-    Cart,
-
-    Payment,
-    ProductDetailTable,
-    OrderSummary
+    ProductDetail,
+    Comfirmation,
+    Payment
   },
   computed: {
-    ...mapGetters(['getIsShowMainHeader'])
+    ...mapGetters(['getIsShowMainHeader', 'getIsShowUserHeader'])
+  },
+  data () {
+    return {
+      userDetail: {}
+    }
+  },
+  methods: {
+
   }
 }
 </script>

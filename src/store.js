@@ -1,10 +1,10 @@
 
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { checkoutPreference } from './store/checkoutPreference'
+import { headerPreference } from './store/headerPreference'
 Vue.use(Vuex)
 export default new Vuex.Store({
   modules: {
-    checkoutPreference
+    headerPreference
   }
 })
