@@ -59,6 +59,7 @@ export default {
             console.log(response)
             this.userDetail = response
             this.setUserDetail(response)
+            axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
           })
         } else {
           console.log('User cancelled login or did not fully authorize.')

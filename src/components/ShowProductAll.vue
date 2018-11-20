@@ -1,51 +1,14 @@
 <template>
     <div class="clearfix">
-<div class="point" v-for="(item,i) in items"
-                   :key="i"
-
-                    >
-  <v-hover  >
-    <v-card
-      slot-scope="{ hover }"
-      class="mx-auto"
-      color="grey lighten-4"
-      max-width="600"
-    >
-      <v-img  :src ="item.src" >
-        <v-expand-transition >
-          <div
-            v-if="hover"
-            class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
-            style="height: 100%;"
-
-          >
-         <p> {{item.price}}</p>
-          </div>
-        </v-expand-transition>
-      </v-img>
-      <v-card-text
-        class="pt-4"
-        style="position: relative;"
-      >
-
-          <v-icon>mdi-cart</v-icon>
-
-        <div class="font-weight-light grey--text title mb-2">{{item.category}}</div>
-        <h3 class="display-1 font-weight-light orange--text mb-2">{{item.name}}</h3>
-        <div class="font-weight-light title mb-2">
-          {{item.detail}}
-
-        </div>
-      </v-card-text>
-
-    </v-card>
-  </v-hover>
-
-</div>
-        </div>
+      <router-link  :to="`/product/${product.productId}`" v-for="product in products" :key="product.productId">
+      <product-card  class="point" :product="product"  />
+      </router-link>
+    </div>
 </template>
 
 <script>
+import axios from 'axios'
+import ProductCard from './ProductCard'
 export default {
   data () {
     return {
@@ -55,7 +18,7 @@ export default {
           'https://lumiere-a.akamaihd.net/v1/images/file_4e56e66a.jpeg?width=1200&region=0%2C0%2C2000%2C2000&quality=8',
           price: '$11',
           category: 'Home Décor',
-          name: 'Stitch Sketchbook ',
+          name: 'Stitch Sketchbook',
           detail: 'Bring the spirit of Aloha'
         },
         {
@@ -98,10 +61,25 @@ export default {
           name: 'Hurley One And Only Perfect',
           detail: 'made with thermal fleece'
         }
-
-      ]
+      ],
+      products: []
     }
-  }
+  },
+  components: {
+    ProductCard
+  },
+  mounted(){
+    this.loadAllProduct()
+  },
+  methods: {
+    loadAllProduct: async function(){
+      let products = await axios.get(process.env.VUE_APP_BACKEND_SERVICE + '/product')
+      //this.items = items
+      products = products.data
+      this.products = products
+      console.log(products)
+    }
+  },
 }
 </script>
 
