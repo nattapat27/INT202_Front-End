@@ -16,6 +16,7 @@ export const headerPreference = {
       state.isShowMainHeader = isShowMainHeader
     },
     setIsShowUserHeader: function (state, isShowUserHeader) {
+      console.log(state.isShowMainHeader)
       state.isShowUserHeader = isShowUserHeader
     }
   },
@@ -24,7 +25,8 @@ export const headerPreference = {
       return state.isShowMainHeader
     },
     getIsShowUserHeader: function (state) {
-      return state.getIsShowUserHeader
+      console.log(state.isShowMainHeader)
+      return state.isShowUserHeader
     }
 
   }

@@ -16,17 +16,14 @@
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="4">COMFIRMATION</v-stepper-step>
-
+      <v-stepper-step step="4">CONFIRMATION</v-stepper-step>
     </v-stepper-header>
+
+
 
     <v-stepper-items>
       <v-stepper-content step="1">
-        <v-card
-          class="mb-5"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
+        <Cart/>
 
         <v-layout class="text-xs-right"
          justify-space-around>
@@ -34,14 +31,12 @@
          <v-btn  @click="setIsShowMainHeader(true)">Back to shopping</v-btn>
           </router-link>
         <v-spacer></v-spacer>
-            <v-spacer></v-spacer>
-             <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
         <br>
         <br>
-        <v-btn
-          color="primary"
-          @click="e1 = 2"
-        >
+
+        <v-btn  color="primary" @click="e1 = 2">
           Next
         </v-btn>
         </v-layout>
@@ -52,20 +47,15 @@
             <delivery/>
      <v-layout class="text-xs-right"
          justify-space-around>
-        <v-btn
-          color="primary"
-          @click="e1 = 1"
-        >
+        <v-btn color="primary" @click="e1 = 1">
           Back
         </v-btn>
-         <v-spacer></v-spacer>
-            <v-spacer></v-spacer>
-             <v-spacer></v-spacer>
 
-        <v-btn
-          color="primary"
-          @click="e1 = 3"
-        >
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+
+        <v-btn color="primary" @click="e1 = 3">
           Next
         </v-btn>
      </v-layout>
@@ -73,15 +63,10 @@
       </v-stepper-content>
 
       <v-stepper-content step="3">
+        <!-- component payment -->
         <payment/>
-
-      <v-layout class="text-xs-right"
-         justify-space-around>
-
-        <v-btn
-          color="primary"
-          @click="e1 = 2"
-        >
+      <v-layout class="text-xs-right" justify-space-around>
+        <v-btn  color="primary" @click="e1 = 2" >
           Back
         </v-btn>
             <v-spacer></v-spacer>
@@ -99,12 +84,8 @@
       </v-stepper-content>
 
       <v-stepper-content step="4">
-        <v-card
-          class="mb-5"
-          color="grey lighten-1"
-          height="200px"
-        ></v-card>
-
+          
+<confirmation/>
         <v-layout class="text-xs-right"
          justify-space-around>
           <v-spacer></v-spacer>
@@ -119,7 +100,6 @@
         </v-layout>
 
       </v-stepper-content>
-
     </v-stepper-items>
   </v-stepper>
   </v-card>
@@ -129,6 +109,8 @@
 <script>
 import Payment from '../components/Checkout/Payment'
 import Delivery from '../components/Checkout/Delivery'
+import Cart from '../components/Checkout/Cart'
+import Confirmation from '../components/Checkout/Confirmation'
 import { mapActions } from 'vuex'
 
 export default {
@@ -139,7 +121,9 @@ export default {
   },
   components: {
     Payment,
-    Delivery
+    Delivery,
+    Cart,
+    Confirmation
   },
   methods: {
     ...mapActions(['setIsShowMainHeader'])

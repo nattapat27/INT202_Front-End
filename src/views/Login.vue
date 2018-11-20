@@ -1,8 +1,6 @@
 <template>
   <v-app>
     <v-content>
-     
-    
       <!-- <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn> -->
     </v-content>
 
@@ -52,7 +50,7 @@
           <v-btn class="ClickToFacebook" color="rgb(51,102,204)" @click="loginFacebook()" style="color:white; margin-left:-50%">เข้าสู่ระบบด้วย Facebook</v-btn>
           </div>
       </div>
-  
+
   </v-app>
 
 </template>
@@ -65,10 +63,15 @@ export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
   name: "Login",
   components: {},
+  name: 'Login',
+  components: {
+
+  },
   computed: {
     ...mapGetters(["getUserDetail", "getJwtToken"])
   },
   data() {
+  data () {
     return {
       checkbox: true,
       
@@ -78,6 +81,14 @@ export default {
       //   }
       // ]
     };
+
+    }
+  },
+  mounted () {
+    this.hideAnyHeaderWhenOnLoginPage()
+  },
+  beforeRouteLeave (to, from, next) {
+    this.showHeaderAfterExitLoginPage()
   },
   methods: {
     ...mapActions(["setUserDetail", "setJwtToken"]),
@@ -95,6 +106,30 @@ export default {
           console.log("User cancelled login or did not fully authorize.");
         }
       });
+    ...mapActions(['setUserDetail', 'setJwtToken', 'setIsShowUserHeader', 'setIsShowMainHeader']),
+    loginFacebook: function () {
+      FB.login((response) => {
+        if (response.authResponse) {
+          console.log('Welcome!  Fetching your information.... ')
+          FB.api('/me?fields=id,name,email', (response) => {
+            console.log('Good to see you, ' + response.name + '.')
+            console.log(response)
+            this.userDetail = response
+            this.setUserDetail(response)
+            axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
+          })
+        } else {
+          console.log('User cancelled login or did not fully authorize.')
+        }
+      })
+    },
+    hideAnyHeaderWhenOnLoginPage: function () {
+      this.setIsShowUserHeader(false)
+      this.setIsShowMainHeader(false)
+    },
+    showHeaderAfterExitLoginPage: function () {
+      this.setIsShowUserHeader(true)
+      this.setIsShowMainHeader(true)
     }
   }
 };
@@ -126,6 +161,7 @@ export default {
   width: 50%;
   height: 100%;
   position: absolute;
+
 }
 
 .LoginRight {
@@ -136,6 +172,7 @@ export default {
 
 .Logo {
   margin-top: 15%;
+
 }
 
 .ClickToFacebook{
@@ -144,5 +181,3 @@ export default {
 
 
 </style>
-
-

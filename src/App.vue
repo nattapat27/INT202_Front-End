@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <HeaderUser v-show="getIsShowUserHeader"/>
-      <mainheader v-show="getIsShowMainHeader"/> 
+      <mainheader v-show="getIsShowMainHeader"/>
       <router-view></router-view>
     </v-content>
   </v-app>
@@ -11,14 +11,12 @@
 
 <script>
 import Delivery from './components/Checkout/Delivery'
-import Mainheader from './components/Mainheader'
-import HeaderUser from './components/HeaderUser'
-import CarouselBanner from './components/CarouselBanner'
-import ShowProductAll from './components/ShowProductAll'
-import ProductDetail from './views/ProductDetail'
-import Cart from './components/Checkout/Cart'
-import Comfirmation from './components/Checkout/Comfirmation'
+import Mainheader from './components/header/Mainheader'
+import HeaderUser from './components/header/HeaderUser'
+import Confirmation from './components/Checkout/Confirmation'
 import Payment from './components/Checkout/Payment'
+import ProductDetailTable from './components/Checkout/ProductDetailTable'
+import OrderSummary from './components/Checkout/OrderSummary'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -27,24 +25,20 @@ export default {
   components: {
     Delivery,
     Mainheader,
-    CarouselBanner,
-    ShowProductAll,
-    ProductDetail,
     HeaderUser,
-    Cart,
-    Comfirmation,
+    Confirmation,
     Payment
   },
   computed: {
     ...mapGetters(['getIsShowMainHeader', 'getIsShowUserHeader'])
   },
-  data(){
+  data () {
     return {
       userDetail: {}
     }
   },
   methods: {
-    
+
   }
 }
 </script>

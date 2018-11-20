@@ -10,17 +10,17 @@
       </v-layout> -->
       <v-toolbar slot="header"  height="65pt"  >
       <v-toolbar-title class="headline text-uppercase">
+        <router-link to="/">
           <v-btn color="#7F63BA" id="fontcolor">All Categories</v-btn>
+        </router-link>
           <v-btn color="#F6B94D" id="fontcolor">Best Seller</v-btn>
           <v-btn color="#DA5786" id="fontcolor">Super deal</v-btn>
           <v-btn color="#F08B49" id="fontcolor">Event coupon</v-btn>
-
       </v-toolbar-title>
       <v-spacer>
       </v-spacer>
 
       <v-spacer>
-     
 
         <v-text-field
         append-icon="mic"

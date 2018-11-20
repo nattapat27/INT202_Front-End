@@ -1,20 +1,14 @@
 <template>
-
-<center><div>
-
-  <!-- <router-link to="/Delivery"> -->
-  <v-carousel id="product">
-  <v-carousel-item
-
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-    >
-    </v-carousel-item>
-  </v-carousel>
-  <!-- </router-link> -->
-
-</div></center>
+  <center>
+    <div>
+    <!-- <router-link to="/Delivery"> -->
+    <v-carousel id="product">
+    <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src">
+      </v-carousel-item>
+    </v-carousel>
+    <!-- </router-link> -->
+    </div>
+  </center>
 </template>
 
 <script>
@@ -47,6 +41,7 @@ export default {
 #product {
   width: 974.74px;
   height: 250px;
-  margin-top: 7%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 </style>
