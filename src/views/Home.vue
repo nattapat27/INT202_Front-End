@@ -5,6 +5,7 @@
       <router-link  :to="`/product/${product.productId}`" v-for="product in products" :key="product.productId">
         <product-card  class="point" :product="product"  />
       </router-link>
+        
     </div>
   </div>
 </template>
@@ -46,6 +47,11 @@ export default {
   content: "";
   clear: both;
   display: table;
+  width: 1200px;
+  height: 250px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 12%;
 }
 
 .point {

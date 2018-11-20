@@ -1,6 +1,8 @@
 <template>
+
     <div>
         <!-- <center><h1 class="header">Added To Cart</h1></center> -->
+        <br>
         <div class="imageProduct">
             <v-carousel style="width: 250px" height="250px" margin-top="50px">
               <v-carousel-item :src="product.image"></v-carousel-item>
@@ -20,8 +22,8 @@
             <router-link to="/checkoutproduct">
               <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>
             </router-link>
-            <v-btn @click="addProductToCart(order)" class="buttonAddToShoppingCart" 
-                                    color="#5670BA" large>
+            <v-btn @click="addProductToCart(4)" class="buttonAddToShoppingCart" 
+               color="#5670BA" large>
               Add to Shopping Cart
             </v-btn>
           <br><br><br><br>
