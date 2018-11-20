@@ -1,14 +1,16 @@
 <template>
   <v-app>
     <v-content>
-      <!-- <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn> -->
+      <v-btn color="rgb(51,102,204)" @click="loginFacebook()" style="color:white">Login Facebook ที่หน้าตาสวยที่สุดในโลกโดยซัน</v-btn>
+      <v-btn color="rgb(51,102,204)" @click="checkLoginState()" style="color:white">status</v-btn>
+      <v-btn color="rgb(51,102,204)" @click="logoutFacebook()" style="color:white">logout facebook</v-btn>
     </v-content>
 
-      <div class="LoginLeft">
+      <!-- <div class="LoginLeft">
         <center><img class="Logo" src="../assets/Logo1.png" alt="Logo"></center>
-           <!-- <v-img  :src ="item.src" >
+           <v-img  :src ="item.src" >
 
-           </v-img> -->
+           </v-img> 
       </div>
 
       <div class="LoginRight" 
@@ -86,6 +88,7 @@ export default {
   },
   mounted () {
     this.hideAnyHeaderWhenOnLoginPage()
+   
   },
   beforeRouteLeave (to, from, next) {
     this.showHeaderAfterExitLoginPage()
@@ -116,12 +119,23 @@ export default {
             console.log(response)
             this.userDetail = response
             this.setUserDetail(response)
-            axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
+            // axios.post(process.env.VUE_APP_BACKEND_SERVICE + '/user/login')
           })
         } else {
           console.log('User cancelled login or did not fully authorize.')
         }
       })
+    },
+    logoutFacebook: function() {
+      FB.logout((logoutResponse) => {
+        console.log(logoutResponse)
+      });
+    },
+    checkLoginState: function () {
+      FB.getLoginStatus((response) => {
+        console.log('dfsdf')
+        console.log(response)
+      });
     },
     hideAnyHeaderWhenOnLoginPage: function () {
       this.setIsShowUserHeader(false)
