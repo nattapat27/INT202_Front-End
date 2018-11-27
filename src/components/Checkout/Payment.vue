@@ -81,6 +81,7 @@ export default {
 
   },
   methods: {
+    ...mapActions(['setSumPrice']),
     confirmPayment: function() {
       console.log("payment run!!!")
       console.log(this.getOrder.order.orderId)
@@ -90,9 +91,11 @@ export default {
         console.log(orderDetail.length)
         sumPrice += orderDetail[i].quantity * orderDetail[i].product.price
       }
+      this.setSumPrice(sumPrice)
       console.log(sumPrice)
       OmiseCard.configure({
         publicKey: "pkey_test_5dzfquzxmdlxfdgu2yx",
+        amount: sumPrice,
       });
       OmiseCard.open({
         frameLabel: "Esimo",

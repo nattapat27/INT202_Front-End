@@ -2,7 +2,8 @@ import axios from 'axios'
 export const cartDetail = {
   state: {
     cart: {},
-    order: {}
+    order: {},
+    sumPrice: 0
   },
   actions: {
     addProductToCart: async function ({ commit }, order) {
@@ -17,6 +18,9 @@ export const cartDetail = {
     fetchOrderFromUser: async function ({ commit }, userId) {
       let order = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/cart/${userId}`)
       commit('setOrder', order.data)
+    },
+    setSumPrice: function ({ commit }, sumPrice) {
+      commit('setSumPrice', sumPrice)
     }
   },
   mutations: {
@@ -28,6 +32,9 @@ export const cartDetail = {
       console.log('set orrder')
       console.log(order)
       state.order = order
+    },
+    setSumPrice: function (state, sumPrice) {
+      state.sumPrice = sumPrice
     }
   },
   getters: {
@@ -36,6 +43,9 @@ export const cartDetail = {
     },
     getOrder: function (state) {
       return state.order
+    },
+    getSumPrice: function (state) {
+      return state.getPrice
     }
   }
 }

@@ -12,7 +12,7 @@
             <br>
             <br>
             <br>
-            SHIPPING
+            SHIPPING ชำระเงินสำเร็จแล้ว
             <v-flex xs12 sm6 d-flex>
         <b-form-select v-model="selected" :options="options" class="mb-3" size="sm" width="2pt"/>
             </v-flex>
@@ -20,7 +20,7 @@
             <v-layout justify-center>
                 TOTAL COST
             <v-spacer> </v-spacer>
-                155  THB <!-- ตัวแปรราคารวม-->
+                 {{getSumPrice}} THB <!-- ตัวแปรราคารวม-->
             <v-spacer> </v-spacer>
             </v-layout>
             <br>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data () {
     return {
@@ -38,6 +39,9 @@ export default {
         { value: null, text: 'Kerry -55 THB' }
       ]
     }
+  },
+  computed:{
+    ...mapGetters(['getSumPrice'])
   }
 }
 </script>

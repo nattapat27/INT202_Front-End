@@ -16,7 +16,7 @@
              <v-divider> </v-divider>
             <h2> 3) PAYMENT METHOD </h2>
             <v-flex xs12 sm6 d-flex>
-
+                ชำระเงินสำเร็จ
             </v-flex>
 
             <!-- จ่ายด้วย ... -->
@@ -27,7 +27,7 @@
             TOTAL COST
 
             <v-spacer> </v-spacer>
-            155  THB <!-- ตัวแปรราคารวม-->
+            {{getSumPrice}}  THB <!-- ตัวแปรราคารวม-->
             <v-spacer> </v-spacer>
 
             </v-layout>
@@ -37,6 +37,12 @@
         </v-card>
 </template>
 
-<script>
 
+<script>
+import {mapGetters} from 'vuex'
+export default {
+  computed:{
+    ...mapGetters(['getSumPrice'])
+  }
+}
 </script>
