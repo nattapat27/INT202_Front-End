@@ -23,30 +23,29 @@
 
     <v-stepper-items>
       <v-stepper-content step="1">
-        <Cart/>
 
-        <v-layout class="text-xs-right"
-         justify-space-around>
+        <!-- Component Cart -->
+        <Cart ref="cart" />
+
+        <v-layout class="text-xs-right" justify-space-around>
           <router-link to="/">
          <v-btn  @click="setIsShowMainHeader(true)">Back to shopping</v-btn>
           </router-link>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-        <br>
-        <br>
-
-        <v-btn  color="primary" @click="e1 = 2">
-          Next
-        </v-btn>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <br>
+          <br>
+          <v-btn  color="primary" @click="e1 = 2">
+            Next
+          </v-btn>
         </v-layout>
       </v-stepper-content>
 
       <v-stepper-content step="2">
 
-            <delivery/>
-     <v-layout class="text-xs-right"
-         justify-space-around>
+        <delivery ref="delivery"/>
+        <v-layout class="text-xs-right" justify-space-around>
         <v-btn color="primary" @click="e1 = 1">
           Back
         </v-btn>
@@ -64,7 +63,8 @@
 
       <v-stepper-content step="3">
         <!-- component payment -->
-        <payment/>
+        <payment ref="payment"/>
+
       <v-layout class="text-xs-right" justify-space-around>
         <v-btn  color="primary" @click="e1 = 2" >
           Back
@@ -84,8 +84,9 @@
       </v-stepper-content>
 
       <v-stepper-content step="4">
-          
-      <confirmation/>
+      <!-- Confirmation component -->
+      <confirmation ref="confirmation" />
+
         <v-layout class="text-xs-right"
          justify-space-around>
           <v-spacer></v-spacer>
@@ -126,7 +127,13 @@ export default {
     Confirmation
   },
   methods: {
-    ...mapActions(['setIsShowMainHeader'])
+    ...mapActions(['setIsShowMainHeader']),
+    buttonAction: function() {
+      if(this.e1 == 2){
+        console.log('Using Address Function is Work!!!')
+        this.$refs.delivery.saveUserAddress()
+      }
+    }
   },
   mounted () {
     this.setIsShowMainHeader(false)
