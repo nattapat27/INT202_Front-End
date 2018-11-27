@@ -37,8 +37,8 @@ export default {
       userDetail: {}
     }
   },
-  mounted(){
-    
+  mounted () {
+
   },
   methods: {
 

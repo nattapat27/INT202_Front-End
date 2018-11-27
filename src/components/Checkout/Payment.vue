@@ -71,26 +71,18 @@
         <v-flex xs12 sm6 md3>
           END DATE
 
-        <v-select
-          :items="m"
-          label="Month"
-          solo
-        ></v-select>
+        <v-text-field v-model.number="expMonth" label="Month"></v-text-field>
         </v-flex>
-
         <v-flex xs12 sm6 md3>
           <br>
-      <v-select
-          :items="y"
-          label="Year"
-          solo
-        ></v-select>
+      <v-text-field v-model.number="expYear" label="Year"></v-text-field>
 
         </v-flex>
 
         <v-flex xs12 sm6 md3>
           CCVV
           <v-text-field
+            v-model.number="ccv"
             type="NUMBER"
             label="xxxx"
             single-line
@@ -110,8 +102,6 @@
 export default {
   data () {
     return {
-      m: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
-      y: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027'],
       selected: 'first',
       options: [
         { value: 'Visa' },
@@ -119,36 +109,37 @@ export default {
         { value: 'PayPal' }
       ],
       cardHolderName: '',
+      expMonth: 1,
+      expYear: 2020,
       cardNumber: 0,
-      
+      ccv: 0
     }
   },
   methods: {
-    confirmPayment: function(){
-      Omise.setPublicKey('pkey_test_5dzsdnaino7z9lzzahb');
+    confirmPayment: function () {
+      console.log('payment run!!!')
+      Omise.setPublicKey('pkey_test_5dzsdnaino7z9lzzahb')
 
-        var cardInformation = {
-          name:             cardForm.nameOnCard.value,
-          number:           cardForm.cardNumber.value,
-          expiration_month: cardForm.expiryMonth.value,
-          expiration_year:  cardForm.expiryYear.value,
-          security_code:    cardForm.securityCode.value
-        };
+      var cardInformation = {
+        name: this.cardHolderName,
+        number: this.cardNumber,
+        expiration_month: this.expMonth,
+        expiration_year: this.expYear.value,
+        security_code: this.expYear.value
+      }
 
-        Omise.createToken('card', cardInformation, (statusCode, response) =>{
-          if (statusCode === 200) {
-            // Success: send back the TOKEN_ID to your server. The TOKEN_ID can be
-            // found in `response.id`.
-            checkoutForm.token.value = response.id;
-            checkoutForm.submit();
-          }
-          else {
-            // Error: display an error message. Note that `response.message` contains
-            // a preformatted error message. Also note that `response.code` will be
-            // "invalid_card" in case of validation error on the card.
-          }
-        });
-
+      Omise.createToken('card', cardInformation, (statusCode, response) => {
+        if (statusCode === 200) {
+          // Success: send back the TOKEN_ID to your server. The TOKEN_ID can be
+          // found in `response.id`.
+          checkoutForm.token.value = response.id
+          checkoutForm.submit()
+        } else {
+          // Error: display an error message. Note that `response.message` contains
+          // a preformatted error message. Also note that `response.code` will be
+          // "invalid_card" in case of validation error on the card.
+        }
+      })
     }
   }
 }

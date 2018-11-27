@@ -22,7 +22,7 @@
             <router-link to="/checkoutproduct">
               <v-btn class="buttonBuyNow" color="#5670BA" large >Buy Now</v-btn>
             </router-link>
-            <v-btn @click="addProductToCart(order)" class="buttonAddToShoppingCart" 
+            <v-btn @click="addProductToCart(order)" class="buttonAddToShoppingCart"
                color="#5670BA" large>
               Add to Shopping Cart
             </v-btn>
@@ -40,7 +40,7 @@
 
 <script>
 import axios from 'axios'
-import {mapGetters, mapActions} from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   data () {
     return {
@@ -68,7 +68,7 @@ export default {
       console.log(this.product)
     }
   },
-  mounted(){
+  mounted () {
     this.order.userId = this.getUserDetail.userId
     this.order.productId = this.$route.params.productId
     console.log(this.order)

@@ -28,7 +28,7 @@
           <v-layout justify-center>
           <input type="number" name="quantity"
             min="0" max="100" :value="order.quantity" >
-       
+
           </v-layout>
           <v-spacer> </v-spacer>
           <!-- เงิน -->
@@ -37,24 +37,23 @@
           <!-- ราคารวม -->
           {{order.totalPrice}}
         </v-layout>
-</v-container>        
+</v-container>
 </template>
 <script>
 
 export default {
-      components: {
-    
-      },
-      props: {
-            order: {}
-      },
-      mounted(){
-            console.log('product table')
-      },
-      methods: {
+  components: {
 
-      }
+  },
+  props: {
+    order: {}
+  },
+  mounted () {
+    console.log('product table')
+  },
+  methods: {
+
+  }
 }
-  
-  
+
 </script>

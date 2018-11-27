@@ -1,9 +1,9 @@
 <template>
         <v-card color="light-blue lighten-4" width="344">
-           
+
             <br>
            <h2>2) DELIVERY</h2>
-               
+
             <br>
             <br>
             <br>
@@ -13,24 +13,23 @@
           -->
             <br>
             <br>
-             <v-divider> </v-divider> 
+             <v-divider> </v-divider>
             <h2> 3) PAYMENT METHOD </h2>
             <v-flex xs12 sm6 d-flex>
-       
+
             </v-flex>
-            
+
             <!-- จ่ายด้วย ... -->
             <br>
             <br>
             <br>
             <v-layout justify-center>
-            TOTAL COST        
-            
+            TOTAL COST
+
             <v-spacer> </v-spacer>
             155  THB <!-- ตัวแปรราคารวม-->
             <v-spacer> </v-spacer>
-            
-           
+
             </v-layout>
             <br>
             <br>

@@ -100,11 +100,11 @@
 </v-container>
 </template>
 <script>
-import {mapGetters, mapActions} from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import axios from 'axios'
 export default {
   data () {
-    return{
+    return {
       address: {
         country: '',
         city: '',
@@ -121,22 +121,22 @@ export default {
   computed: {
     ...mapGetters(['getUserDetail'])
   },
-  mounted(){
+  mounted () {
     this.loadUserAddressDetail()
   },
-  methods:{
-    loadUserAddressDetail: function(){
+  methods: {
+    loadUserAddressDetail: function () {
       console.log(this.getUserDetail.address)
       this.address = this.getUserDetail.address
-      //delete this.address.addressId
+      // delete this.address.addressId
       console.log(this.address)
-      
+
       this.email = this.getUserDetail.email
       this.firstName = this.getUserDetail.firstName
       this.lastName = this.getUserDetail.lastName
       this.phoneNumber = this.getUserDetail.phoneNumber
     },
-    updateUserDeliveryDetail: function(){
+    updateUserDeliveryDetail: function () {
       console.log('save new user & address!!!')
       let userDetail = this.getUserDetail
       userDetail.address = this.address
@@ -147,8 +147,10 @@ export default {
 
       console.log('After Set NewDetail to User & Address')
       console.log(userDetail)
-      //axios.post(`${process.env.VUE_APP_BACKEND_SERVICE}/user`)
-      
+      axios.post(`${process.env.VUE_APP_BACKEND_SERVICE}/user`, userDetail)
+        .then((response) => {
+          console.log('success update detail')
+        })
     }
   }
 

@@ -18,7 +18,7 @@
             </v-flex>
             <v-divider> </v-divider>
             <v-layout justify-center>
-                TOTAL COST                   
+                TOTAL COST
             <v-spacer> </v-spacer>
                 155  THB <!-- ตัวแปรราคารวม-->
             <v-spacer> </v-spacer>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  export default {
+export default {
   data () {
     return {
       selected: null,

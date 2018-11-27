@@ -74,14 +74,17 @@ export default {
   },
   methods: {
     ...mapActions(['setIsShowMainHeader']),
-    stepperAction: function() {
-      if(this.stepperStatus == 2){
+    stepperAction: function () {
+      if (this.stepperStatus == 2) {
         console.log('Using Address Function is Work!!!')
         this.$refs.delivery.updateUserDeliveryDetail()
       }
+      else if(this.stepperStatus == 3){
+        this.$refs.payment.confirmPayment()
+      }
     },
-    test: function(){
-      console.log('test : '+this.stepperStatus)
+    test: function () {
+      console.log('test : ' + this.stepperStatus)
     }
   },
   mounted () {

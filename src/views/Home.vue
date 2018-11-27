@@ -5,7 +5,7 @@
       <router-link  :to="`/product/${product.productId}`" v-for="product in products" :key="product.productId">
         <product-card  class="point" :product="product"  />
       </router-link>
-        
+
     </div>
   </div>
 </template>

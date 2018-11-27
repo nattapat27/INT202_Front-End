@@ -30,9 +30,9 @@
     <button type="button" style="margin-top:-10%;" class="btn btn-link-primary" id="ForgetPassword">Forget Password?</button>
   </v-form>
   <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-left:10px" >Login</button>
-  
+
   <button type="button" class="btn btn-link-warning " style="margin-left:1px" >Not Resgister?   SIGN UP</button>
-  
+
   <br>
    <hr style="margin-top:130px">
           </div>
@@ -51,17 +51,17 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-import axios from "axios";
+import { mapGetters, mapActions } from 'vuex'
+import axios from 'axios'
 
 export default {
   // พื้นฐานของวิวที่มีไว้เก็บทุกหน้า
-  name: "Login",
+  name: 'Login',
   components: {
 
   },
   computed: {
-    ...mapGetters(["getUserDetail", "getJwtToken"])
+    ...mapGetters(['getUserDetail', 'getJwtToken'])
   },
   data () {
     return {
@@ -84,7 +84,7 @@ export default {
         if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ')
           FB.api('/me?fields=id,name,email', async (response) => {
-            //this.userDetail = response
+            // this.userDetail = response
             let jsonLoginBody = {
               fbId: response.id,
               username: response.name,
@@ -100,16 +100,16 @@ export default {
         }
       })
     },
-    logoutFacebook: function() {
+    logoutFacebook: function () {
       FB.logout((logoutResponse) => {
         console.log(logoutResponse)
-      });
+      })
     },
     checkLoginState: function () {
       FB.getLoginStatus((response) => {
         console.log('status')
         console.log(response)
-      });
+      })
     },
     hideAnyHeaderWhenOnLoginPage: function () {
       this.setIsShowUserHeader(false)
@@ -120,11 +120,10 @@ export default {
       this.setIsShowMainHeader(true)
     }
   }
-};
+}
 </script>
 
 <style>
-
 
 .line {
   font-size: 20px;
@@ -166,6 +165,5 @@ export default {
 .ClickToFacebook{
   border-radius: 5%;
 }
-
 
 </style>
