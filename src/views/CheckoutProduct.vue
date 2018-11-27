@@ -21,7 +21,6 @@
 
       <v-stepper-items>
         <v-stepper-content step="1">
-          <!-- Component Cart -->
           <Cart ref="cart" />
         </v-stepper-content>
 
@@ -30,14 +29,11 @@
       </v-stepper-content>
 
       <v-stepper-content step="3">
-        <!-- component payment -->
         <payment ref="payment"/>
       </v-stepper-content>
 
       <v-stepper-content step="4">
-        <!-- Confirmation component -->
         <confirmation ref="confirmation" />
-
       </v-stepper-content>
 
       <v-layout class="text-xs-right" justify-space-around>
@@ -46,7 +42,7 @@
         </router-link>
         <v-btn v-else @click="stepperStatus -= 1">Back</v-btn>
         <v-spacer></v-spacer>
-        <v-btn  color="primary" @click="stepperAction(); stepperStatus = parseInt(stepperStatus) + 1 ">
+        <v-btn  color="primary" @click="stepperAction(); stepperStatus = parseInt(stepperStatus) + 1">
             Next
         </v-btn>
       </v-layout>
@@ -81,7 +77,7 @@ export default {
     stepperAction: function() {
       if(this.stepperStatus == 2){
         console.log('Using Address Function is Work!!!')
-        this.$refs.delivery.saveUserAddress()
+        this.$refs.delivery.updateUserDeliveryDetail()
       }
     },
     test: function(){
