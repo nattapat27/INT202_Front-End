@@ -60,6 +60,7 @@ import Cart from '../components/Checkout/Cart'
 import Confirmation from '../components/Checkout/Confirmation'
 import { mapActions } from 'vuex'
 
+
 export default {
   data () {
     return {
@@ -71,6 +72,8 @@ export default {
     Delivery,
     Cart,
     Confirmation
+  },
+  mounted(){
   },
   methods: {
     ...mapActions(['setIsShowMainHeader']),
@@ -89,6 +92,7 @@ export default {
   },
   mounted () {
     this.setIsShowMainHeader(false)
+        
   }
 }
 </script>

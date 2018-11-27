@@ -19,7 +19,7 @@
 import axios from 'axios'
 import ProductDetailTable from './ProductDetailTable'
 import OrderSummary from './OrderSummary'
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapMutations } from 'vuex'
 export default {
   components: {
     OrderSummary,
@@ -32,19 +32,20 @@ export default {
   },
   mounted () {
     this.loadOrderDetail()
-    // this.getCartByUserId(this.getUserDetail.userId)
   },
   methods: {
-    ...mapGetters(['getCartByUserId']),
+    ...mapActions(['fetchOrderFromUser']),
+    ...mapMutations(['setOrder']),
     loadOrderDetail: async function () {
       console.log(this.getUserDetail.userId)
       let order = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/cart/${this.getUserDetail.userId}`)
       this.order = order.data
-      console.log(this.order)
+      this.setOrder(this.order)
+      console.log(this.getOrder)
     }
   },
   computed: {
-    ...mapGetters(['getUserDetail'])
+    ...mapGetters(['getUserDetail', 'getOrder'])
   }
 }
 </script>
