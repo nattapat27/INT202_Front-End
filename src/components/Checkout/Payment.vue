@@ -84,19 +84,8 @@ export default {
     ...mapActions(['setSumPrice']),
     confirmPayment: function() {
       console.log("payment run!!!")
-      // console.log(this.getOrder.order.orderId)
-      // let orderDetail = this.getOrder.order.orderDetail
-      // let sumPrice = 0
-      // for(let i = 0; i<orderDetail.length; i++){
-      //   console.log(orderDetail.length)
-      //   sumPrice += orderDetail[i].quantity * orderDetail[i].product.price
-      // }
-      // this.setSumPrice(sumPrice)
-      // console.log(sumPrice)
-      OmiseCard.configure({
-        publicKey: "pkey_test_5dzfquzxmdlxfdgu2yx",
-        amount: 545345345353,
-      });
+
+      
       OmiseCard.open({
         frameLabel: "Esimo",
         frameDescription: "Invoice #3847",
@@ -111,6 +100,7 @@ export default {
           console.log("This is FormClose")
         }
       });
+
     }
   }
 };

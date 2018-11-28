@@ -32,6 +32,11 @@ export default {
   },
   mounted () {
     this.loadOrderDetail()
+    
+    OmiseCard.configure({
+        publicKey: "pkey_test_5dzfquzxmdlxfdgu2yx",
+        amount: this.getSumPrice
+    });
   },
   methods: {
     ...mapActions(['fetchOrderFromUser']),
@@ -53,7 +58,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getUserDetail', 'getOrder'])
+    ...mapGetters(['getUserDetail', 'getOrder', 'getSumPrice'])
   }
 }
 </script>
