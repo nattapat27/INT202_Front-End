@@ -40,6 +40,9 @@ export default {
       ]
     }
   },
+  mounted(){
+    console.log(this.getSumPrice)
+  },
   computed:{
     ...mapGetters(['getSumPrice'])
   }

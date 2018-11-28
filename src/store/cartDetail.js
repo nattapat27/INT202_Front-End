@@ -45,7 +45,7 @@ export const cartDetail = {
       return state.order
     },
     getSumPrice: function (state) {
-      return state.getPrice
+      return state.sumPrice
     }
   }
 }

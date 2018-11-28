@@ -35,13 +35,21 @@ export default {
   },
   methods: {
     ...mapActions(['fetchOrderFromUser']),
-    ...mapMutations(['setOrder']),
+    ...mapMutations(['setOrder', 'setSumPrice']),
     loadOrderDetail: async function () {
       console.log(this.getUserDetail.userId)
       let order = await axios.get(`${process.env.VUE_APP_BACKEND_SERVICE}/cart/${this.getUserDetail.userId}`)
       this.order = order.data
       this.setOrder(this.order)
-      console.log(this.getOrder)
+      console.log(this.getOrder.order.orderId)
+      let orderDetail = this.getOrder.order.orderDetail
+      let sumPrice = 0
+      for(let i = 0; i<orderDetail.length; i++){
+        console.log(orderDetail.length)
+        sumPrice += orderDetail[i].quantity * orderDetail[i].product.price
+      }
+      this.setSumPrice(sumPrice)
+
     }
   },
   computed: {

@@ -147,7 +147,7 @@ export default {
 
       console.log('After Set NewDetail to User & Address')
       console.log(userDetail)
-      axios.post(`${process.env.VUE_APP_BACKEND_SERVICE}/user/address/${userDetail.userId}`)
+      axios.post(`${process.env.VUE_APP_BACKEND_SERVICE}/user/address/${userDetail.userId}`, userDetail.address)
         .then((response) => {
           console.log('success update detail')
         })
